@@ -36,6 +36,11 @@ export default function Team({memberImage, memberName, memberDesignation, member
               <Icon icon="fa-brands:facebook-f" />                    
             </Link>
           )}
+          {memberSocial.github && (
+            <Link to={memberSocial.github}>
+              <Icon icon="fa-brands:github" />                    
+            </Link>
+          )}
         </Div>
       </Div>
   )

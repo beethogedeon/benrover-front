@@ -9,8 +9,6 @@ import Cta from '../Cta';
 import LogoList from '../LogoList';
 import MovingText from '../MovingText';
 import PortfolioSlider from '../Slider/PortfolioSlider';
-import PostSlider from '../Slider/PostSlider';
-import TestimonialSlider from '../Slider/TestimonialSlider';
 import TeamSlider from '../Slider/TeamSlider';
 import VideoModal from '../VideoModal';
 import TimelineSlider from '../Slider/TimelineSlider';
@@ -18,32 +16,28 @@ import { pageTitle } from '../../helper';
 // Hero Social Links
 const heroSocialLinks = [
   {
-    name: 'Behance',
-    links: '/',
+    name: 'Github',
+    links: 'https://github.com/benrover-24',
   },
   {
-    name: 'Twitter',
-    links: '/',
+    name: 'LinkedIn',
+    links: 'https://bj.linkedin.com/company/tekbot-robotics',
   },
 ];
 
 // FunFact Data
 const funfaceData = [
   {
-    title: 'Global Happy Clients',
-    factNumber: '40K',
+    title: 'Students & Engineers',
+    factNumber: '+21',
   },
   {
-    title: 'Project Completed',
-    factNumber: '50K',
+    title: 'Young people',
+    factNumber: '100%',
   },
   {
-    title: 'Team Members',
-    factNumber: '245',
-  },
-  {
-    title: 'Digital products',
-    factNumber: '550',
+    title: 'Materials designed by ourselves',
+    factNumber: '90%',
   },
 ];
 const portfolioData = [
@@ -84,98 +78,37 @@ export default function Home() {
     <>
       {/* Start Hero Section */}
       <Hero
-        title="Creativity In <br/>Our Blood Line"
-        subtitle="We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future."
-        btnText="Get a Quote"
-        btnLink="/contact"
-        scrollDownId="#service"
+        title="A rover<br/>for mars missions"
+        subtitle="THIS PROJECT HAS BEEN BUILT BY A TEAM OF YOUNG BENIN ENGINEERS AND STUDENTS AS PART OF AFRICAN ROVER CHALLENGE."
+        btnText="See one Github"
+        btnLink="https://github.com/benrover-24"
+        scrollDownId="#gallery"
         socialLinksHeading="Follow Us"
         heroSocialLinks={heroSocialLinks}
-        bgImageUrl="/images/hero_bg.jpeg"
+        bgImageUrl="/images/hero.jpg"
       />
       {/* End Hero Section */}
 
       {/* Start FunFact Section */}
-      <div className="container">
+      <div className="container" id="about">
         <FunFact
           variant="cs-type1"
-          title="Our fun fact"
-          subtitle="Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis."
+          title="AFRICAN ROVER CHALLENGE"
+          subtitle="The challenge is to design and build a Mars rover prototype. This is not expected to be a space-grade machine and does not need to be ready to operate in actual space or Mars conditions. It's a small, mobile robot, controlled wirelessly with an independent power source."
           data={funfaceData}
         />
       </div>
       {/* End FunFact Section */}
 
-      {/* Start Service Section */}
-      <Spacing lg="150" md="80" />
-      <Div id="service">
-        <Div className="container">
-          <Div className="row">
-            <Div className="col-xl-4">
-              <SectionHeading
-                title="Services we can help you with"
-                subtitle="What Can We Do"
-                btnText="See All Services"
-                btnLink="/service"
-              />
-              <Spacing lg="90" md="45" />
-            </Div>
-            <Div className="col-xl-8">
-              <Div className="row">
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                <Div className="col-lg-3 col-sm-6">
-                  <Card
-                    title="UI/UX design"
-                    link="/service/service-details"
-                    src="/images/service_1.jpeg"
-                    alt="Service"
-                  />
-                  <Spacing lg="0" md="30" />
-                </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                <Div className="col-lg-3 col-sm-6">
-                  <Card
-                    title="React.js Development"
-                    link="/service/service-details"
-                    src="/images/service_2.jpeg"
-                    alt="Service"
-                  />
-                  <Spacing lg="0" md="30" />
-                </Div>
-                <Div className="col-lg-3 col-sm-6">
-                  <Card
-                    title="Digital Marketing"
-                    link="/service/service-details"
-                    src="/images/service_3.jpeg"
-                    alt="Service"
-                  />
-                  <Spacing lg="0" md="30" />
-                </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                <Div className="col-lg-3 col-sm-6">
-                  <Card
-                    title="Technology"
-                    link="/service/service-details"
-                    src="/images/service_4.jpeg"
-                    alt="Service"
-                  />
-                  <Spacing lg="0" md="30" />
-                </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-              </Div>
-            </Div>
-          </Div>
-        </Div>
-      </Div>
-      {/* End Service Section */}
+      
 
       {/* Start Portfolio Section */}
       <Spacing lg="150" md="50" />
       <Div>
-        <Div className="container">
+        <Div className="container" id="gallery">
           <SectionHeading
-            title="Portfolio to explore"
-            subtitle="Latest Projects"
+            title="Look at our works"
+            subtitle="OUR GALLERY"
             variant="cs-style1 text-center"
           />
           <Spacing lg="90" md="45" />
@@ -186,7 +119,7 @@ export default function Home() {
 
       {/* Start Awards Section */}
       <Spacing lg="150" md="80" />
-      <Div className="cs-shape_wrap_2">
+      <Div className="cs-shape_wrap_2" id="goals">
         <Div className="cs-shape_2">
           <Div />
         </Div>
@@ -194,8 +127,8 @@ export default function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="We get multiple awards"
-                subtitle="Our Awards"
+                title="Build - Boost - Inspire"
+                subtitle="OUR GOALS & OBJECTIVES"
                 variant="cs-style1"
               />
               <Spacing lg="90" md="45" />
@@ -225,7 +158,7 @@ export default function Home() {
 
       {/* Start Team Section */}
       <Spacing lg="145" md="80" />
-      <Div className="container">
+      <Div className="container" id="team">
         <SectionHeading
           title="Awesome team <br/>members"
           subtitle="Our Team"
@@ -234,14 +167,15 @@ export default function Home() {
         <Spacing lg="85" md="45" />
         <TeamSlider />
       </Div>
-      <Spacing lg="150" md="80" />
+      <Spacing lg="15" md="7" />
       {/* End Team Section */}
 
       {/* Start Testimonial Section */}
-      <TestimonialSlider />
+      {/*<TestimonialSlider />*/}
       {/* End Testimonial Section */}
 
       {/* Start Blog Section */}
+      {/*
       <Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>
@@ -264,27 +198,97 @@ export default function Home() {
             </Div>
           </Div>
         </Div>
-      </Div>
+      </Div>*/}
       {/* End Blog Section */}
 
       {/* Start MovingText Section */}
       <Spacing lg="125" md="70" />
-      <MovingText text="Our reputed world wide partners" />
+      <MovingText text="Keep moving forward !" />
+
+      {/* Start Service Section */}
+      <Spacing lg="150" md="80" />
+      <Div id="service">
+        <Div className="container">
+          <Div className="row">
+            <Div className="col-xl-4">
+              <SectionHeading
+                title="4 Department to achieve that project"
+                subtitle="Our Team Department"
+              />
+              <Spacing lg="90" md="45" />
+            </Div>
+            <Div className="col-xl-8">
+              <Div className="row">
+                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
+                <Div className="col-lg-3 col-sm-6">
+                  <Card
+                    title="Information Technology"
+                    link="https://benrover-24.github.io/docs/it"
+                    src="/images/service_1.jpeg"
+                    alt="IT Department"
+                  />
+                  <Spacing lg="0" md="30" />
+                </Div>
+                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
+                <Div className="col-lg-3 col-sm-6">
+                  <Card
+                    title="Electronic"
+                    link="https://benrover-24.github.io/docs/electronic"
+                    src="/images/service_2.jpeg"
+                    alt="Electronic Department"
+                  />
+                  <Spacing lg="0" md="30" />
+                </Div>
+                <Div className="col-lg-3 col-sm-6">
+                  <Card
+                    title="Mechanic"
+                    link="https://benrover-24.github.io/docs/mechanic"
+                    src="/images/service_3.jpeg"
+                    alt="Mechanic Department"
+                  />
+                  <Spacing lg="0" md="30" />
+                </Div>
+                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
+                <Div className="col-lg-3 col-sm-6">
+                  <Card
+                    title="Space science"
+                    link="https://benrover-24.github.io/docs/space-science"
+                    src="/images/service_4.jpeg"
+                    alt="Space science Department"
+                  />
+                  <Spacing lg="0" md="30" />
+                </Div>
+                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
+              </Div>
+            </Div>
+          </Div>
+        </Div>
+      </Div>
+      {/* End Service Section */}
       <Spacing lg="105" md="70" />
       {/* End MovingText Section */}
 
       {/* Start LogoList Section */}
       <Div className="container">
+        <Div className="row">
+        <Div className="col-xl-4">
+              <SectionHeading
+                title="Thanks for your support..."
+                subtitle="Our Sponsors"
+              />
+              <Spacing lg="90" md="45" />
+            </Div>
+        </Div>
         <LogoList />
       </Div>
       <Spacing lg="150" md="80" />
       {/* End LogoList Section */}
 
       {/* Start CTA Section */}
-      <Div className="container">
+      <Div className="container" id="sponsor">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
+          title="You can support<br /> <i>BenRover</i> by donating !"
+          btnText="Donate"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
         />

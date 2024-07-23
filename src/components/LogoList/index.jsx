@@ -3,23 +3,27 @@ import Div from '../Div';
 import './logolist.scss';
 const partnerLogos = [
   {
-    src: '/images/partner_1.svg',
+    src: '/images/semecity.png',
     alt: 'Partner',
   },
   {
-    src: '/images/partner_2.svg',
+    src: '/images/scop.png',
     alt: 'Partner',
   },
   {
-    src: '/images/partner_3.svg',
+    src: '/images/semecity.png',
     alt: 'Partner',
   },
   {
-    src: '/images/partner_4.svg',
+    src: '/images/scop.png',
     alt: 'Partner',
   },
   {
-    src: '/images/partner_5.svg',
+    src: '/images/semecity.png',
+    alt: 'Partner',
+  },
+  {
+    src: '/images/scop.png',
     alt: 'Partner',
   },
 ];

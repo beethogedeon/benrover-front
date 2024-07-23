@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import SocialWidget from '../Widget/SocialWidget';
-import Newsletter from '../Widget/Newsletter';
 import './header.scss';
 import ContactInfoWidget from '../Widget/ContactInfoWidget';
 import Div from '../Div';
-import DropDown from './DropDown';
 
 export default function Header({ variant }) {
   const [isSticky, setIsSticky] = useState(false);
@@ -33,7 +31,7 @@ export default function Header({ variant }) {
             <Div className="cs-main_header_in">
               <Div className="cs-main_header_left">
                 <Link className="cs-site_branding" to="/">
-                  <img src="/images/logo.svg" alt="Logo" />
+                  <img src="/images/logo.png" alt="BenRover - Tekbot Robotics" />
                 </Link>
               </Div>
               <Div className="cs-main_header_center">
@@ -44,7 +42,7 @@ export default function Header({ variant }) {
                   >
                     <li>
                       <NavLink
-                        to="about"
+                        to="#about"
                         onClick={() => setMobileToggle(false)}
                       >
                         PROJECT
@@ -52,7 +50,7 @@ export default function Header({ variant }) {
                     </li>
                     <li>
                       <NavLink
-                        to="service"
+                        to="#goals"
                         onClick={() => setMobileToggle(false)}
                       >
                         GOALS & OBJECTIVES
@@ -60,14 +58,14 @@ export default function Header({ variant }) {
                     </li>
                     <li>
                       <NavLink
-                        to="portfolio"
+                        to="#team"
                         onClick={() => setMobileToggle(false)}
                       >
                         OUR TEAM
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="blog" onClick={() => setMobileToggle(false)}>
+                      <NavLink to="#sponsor" onClick={() => setMobileToggle(false)}>
                       SPONSOR US
                       </NavLink>
                     </li>

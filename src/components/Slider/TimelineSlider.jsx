@@ -6,43 +6,23 @@ import Timeline from '../Timeline';
 const timelineData = [
   [
     {
-      year: '2019',
+      year: 'Build creativity',
       name: 'Google awards',
-      position: 'Website of the day',
+      position: 'The excitement in participating in this competition will enable students to learn and use their creativity building robots and opportunity to interact on many levels with others.',
       type: 'Mobile exelence',
     },
     {
-      year: '2021',
-      name: 'CSS awards design',
-      position: 'Honorable mention',
+      year: 'Boost innovation',
+      name: 'Boost innovation',
+      position: 'The competition is a continuous mentoring effort which is intended to educate the next generation of multidisciplinary engineers and others, boost innovation in research and business, and popularise STEM (Science, Technology, Engineering and Mathematics) advancements.',
       type: 'Desktop exelence',
     },
   ],
   [
     {
-      year: '2020',
-      name: 'New technology innovation',
-      position: 'Honorable mention',
-      type: 'Desktop exelence',
-    },
-    {
-      year: '2022',
-      name: 'UI/UX design of the month',
-      position: 'Website of the day',
-      type: 'Mobile exelence',
-    },
-  ],
-  [
-    {
-      year: '2019',
-      name: 'Google awards',
-      position: 'Website of the day',
-      type: 'Mobile exelence',
-    },
-    {
-      year: '2021',
-      name: 'CSS awards design',
-      position: 'Honorable mention',
+      year: 'Inspire African youth',
+      name: 'Inspire African youth',
+      position: 'Inspiring African youth to be part of the Robotics, Space Technologies, and AI rush to conquer the world and outer space.',
       type: 'Desktop exelence',
     },
   ],

@@ -6,17 +6,11 @@ import Div from '../Div';
 export default function SocialWidget() {
   return (
     <Div className="cs-social_btns cs-style1">
-      <Link to='/' className="cs-center">
-        <Icon icon="fa6-brands:linkedin-in" />
+      <Link to='https://github.com/benrover-24' className="cs-center">
+        <Icon icon="fa6-brands:github" />
       </Link>
-      <Link to='/' className="cs-center">
-        <Icon icon="fa6-brands:twitter" />               
-      </Link>
-      <Link to='/' className="cs-center">
-        <Icon icon="fa6-brands:youtube" />              
-      </Link>
-      <Link to='/' className="cs-center">
-        <Icon icon="fa6-brands:slack" />
+      <Link to='https://bj.linkedin.com/company/tekbot-robotics' className="cs-center">
+        <Icon icon="fa6-brands:linkedin" />               
       </Link>
     </Div>
   )
