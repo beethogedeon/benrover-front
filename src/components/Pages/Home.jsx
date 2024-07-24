@@ -13,6 +13,7 @@ import TeamSlider from '../Slider/TeamSlider';
 import VideoModal from '../VideoModal';
 import TimelineSlider from '../Slider/TimelineSlider';
 import { pageTitle } from '../../helper';
+import { HashLink as Link } from 'react-router-hash-link';
 // Hero Social Links
 const heroSocialLinks = [
   {
@@ -27,43 +28,56 @@ const heroSocialLinks = [
 
 // FunFact Data
 const funfaceData = [
-  {
+  /*{
     title: 'Students & Engineers',
     factNumber: '+21',
-  },
-  {
-    title: 'Young people',
-    factNumber: '100%',
-  },
-  {
-    title: 'Materials designed by ourselves',
-    factNumber: '90%',
-  },
+  },*/
 ];
 const portfolioData = [
   {
-    title: 'Colorful Art Work',
+    title: 'Rover Conception',
     subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_1.jpeg',
+    href: 'https://benrover-24.github.io/docs',
+    src: '/images/Gallery/1.png',
   },
   {
-    title: 'Colorful Art Work',
+    title: 'Rover Conception',
     subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_2.jpeg',
+    href: 'https://benrover-24.github.io/docs',
+    src: '/images/Gallery/2.png',
   },
   {
-    title: 'Colorful Art Work',
+    title: 'Rover Conception',
     subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_0.jpg',
+    href: 'https://benrover-24.github.io/docs',
+    src: '/images/Gallery/3.png',
   },
   {
-    title: 'Colorful Art Work',
+    title: 'Engine',
     subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_3.jpeg',
+    href: 'https://benrover-24.github.io/docs',
+    src: '/images/Gallery/4.png',
+  },
+
+  {
+    title: '3D Printing',
+    subtitle: 'See Details',
+    href: 'https://benrover-24.github.io/docs',
+    src: '/images/Gallery/5.png',
+  },
+
+  {
+    title: 'Electronic',
+    subtitle: 'See Details',
+    href: 'https://benrover-24.github.io/docs',
+    src: '/images/Gallery/6.png',
+  },
+
+  {
+    title: 'Electronic',
+    subtitle: 'See Details',
+    href: 'https://benrover-24.github.io/docs',
+    src: '/images/Gallery/7.png',
   },
 ];
 
@@ -94,7 +108,8 @@ export default function Home() {
         <FunFact
           variant="cs-type1"
           title="AFRICAN ROVER CHALLENGE"
-          subtitle="The challenge is to design and build a Mars rover prototype. This is not expected to be a space-grade machine and does not need to be ready to operate in actual space or Mars conditions. It's a small, mobile robot, controlled wirelessly with an independent power source."
+          subtitle="The challenge is to design and build a Mars rover prototype. This is not expected to be a space-grade machine and does not need to be ready to operate in actual space or Mars conditions.
+          It's a small, mobile robot, controlled wirelessly with an independent power source."
           data={funfaceData}
         />
       </div>
@@ -145,13 +160,12 @@ export default function Home() {
       <Spacing lg="130" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
-          Our agile process is ability to adapt and respond to change. Agile
-          organizations view change as an opportunity, not a threat.
+        We're still building...
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
-          videoSrc="https://www.youtube.com/watch?v=VcaAVWtP48A"
-          bgUrl="/images/video_bg.jpeg"
+          videoSrc="https://www.youtube.com/watch?v=yqXpuzi4ek0"
+          bgUrl="/images/video_bg.png"
         />
       </Div>
       {/* End Video Block Section */}
@@ -212,8 +226,8 @@ export default function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="4 Department to achieve that project"
-                subtitle="Our Team Department"
+                title="4 Departments to achieve that project"
+                subtitle="Our Team Departments"
               />
               <Spacing lg="90" md="45" />
             </Div>
@@ -224,7 +238,7 @@ export default function Home() {
                   <Card
                     title="Information Technology"
                     link="https://benrover-24.github.io/docs/it"
-                    src="/images/service_1.jpeg"
+                    src="/images/Departments/IT.png"
                     alt="IT Department"
                   />
                   <Spacing lg="0" md="30" />
@@ -233,8 +247,8 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="Electronic"
-                    link="https://benrover-24.github.io/docs/electronic"
-                    src="/images/service_2.jpeg"
+                    link="https://benrover-24.github.io/docs/electronics"
+                    src="/images/Departments/Electronic.png"
                     alt="Electronic Department"
                   />
                   <Spacing lg="0" md="30" />
@@ -242,8 +256,8 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="Mechanic"
-                    link="https://benrover-24.github.io/docs/mechanic"
-                    src="/images/service_3.jpeg"
+                    link="https://benrover-24.github.io/docs/mechanics"
+                    src="/images/Departments/Mechanic.png"
                     alt="Mechanic Department"
                   />
                   <Spacing lg="0" md="30" />
@@ -252,8 +266,8 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="Space science"
-                    link="https://benrover-24.github.io/docs/space-science"
-                    src="/images/service_4.jpeg"
+                    link="https://benrover-24.github.io/docs/space"
+                    src="/images/Departments/Space.png"
                     alt="Space science Department"
                   />
                   <Spacing lg="0" md="30" />
@@ -290,7 +304,7 @@ export default function Home() {
           title="You can support<br /> <i>BenRover</i> by donating !"
           btnText="Donate"
           btnLink="/contact"
-          bgSrc="/images/cta_bg.jpeg"
+          bgSrc="/images/cta_bg.png"
         />
       </Div>
       {/* End CTA Section */}

@@ -345,7 +345,7 @@
     display: flex;
     align-items: center;
     height: 100%;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.6em;
     color: $white;
 
@@ -355,7 +355,7 @@
       height: inherit;
 
       > li {
-        margin-right: 50px;
+        margin-right: 25px;
         height: inherit;
 
         &:last-child {
@@ -448,9 +448,9 @@
           left: 100%;
         }
       }
-      .active {
+      /*.active {
         color: $accent;
-      }
+      }*/
     }
   }
   .cs-munu_toggle,

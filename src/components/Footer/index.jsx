@@ -8,15 +8,11 @@ import './footer.scss';
 const copyrightLinks = [
   {
     title: 'Documentation',
-    href: '/',
+    href: 'https://benrover-24.github.io/docs',
   },
   {
-    title: 'Terms of Use',
-    href: '/',
-  },
-  {
-    title: 'Privacy Policy',
-    href: '/',
+    title: 'Code Source',
+    href: 'https://github.com/benrover-24',
   },
 ];
 

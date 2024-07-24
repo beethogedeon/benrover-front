@@ -4,28 +4,22 @@ import Slider from 'react-slick';
 import Div from '../Div';
 import Timeline from '../Timeline';
 const timelineData = [
-  [
-    {
-      year: 'Build creativity',
-      name: 'Google awards',
-      position: 'The excitement in participating in this competition will enable students to learn and use their creativity building robots and opportunity to interact on many levels with others.',
-      type: 'Mobile exelence',
+    [
+      {
+      title: 'Build creativity',
+      text: 'The excitement in participating in this competition will enable students to learn and use their creativity building robots and opportunity to interact on many levels with others.',
     },
     {
-      year: 'Boost innovation',
-      name: 'Boost innovation',
-      position: 'The competition is a continuous mentoring effort which is intended to educate the next generation of multidisciplinary engineers and others, boost innovation in research and business, and popularise STEM (Science, Technology, Engineering and Mathematics) advancements.',
-      type: 'Desktop exelence',
-    },
+      title: 'Inspire African youth',
+      text: 'Inspiring African youth to be part of the Robotics, Space Technologies, and AI rush to conquer the world and outer space.',
+    }
   ],
   [
     {
-      year: 'Inspire African youth',
-      name: 'Inspire African youth',
-      position: 'Inspiring African youth to be part of the Robotics, Space Technologies, and AI rush to conquer the world and outer space.',
-      type: 'Desktop exelence',
-    },
-  ],
+      title: 'Boost innovation',
+      text: 'The competition is a continuous mentoring effort which is intended to educate the next generation of multidisciplinary engineers and others, boost innovation in research and business, and popularise STEM (Science, Technology, Engineering and Mathematics) advancements.',
+    }
+  ]
 ];
 
 export default function TimelineSlider() {

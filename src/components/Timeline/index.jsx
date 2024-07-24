@@ -6,11 +6,9 @@ export default function Timeline({columnData}) {
   return (
     <>
       {columnData.map((item,index)=>(
-        <Div className="cs-time_line cs-style1" key={index}>
-          <h3 className="cs-accent_color">{item.year}</h3>
-          <h2>{item.name}</h2>
-          <p>{item.position}</p>
-          <p>{item.type}</p>
+        <Div className="cs-time_line cs-style1" key={index} style={{marginRight:'30px'}}>
+          <h2 className="cs-accent_color">{item.title}</h2>
+          <p style={{textAlign: 'justify'}}>{item.text}</p>
         </Div>
       ))}
     </>

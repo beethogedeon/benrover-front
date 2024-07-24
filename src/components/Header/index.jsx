@@ -42,7 +42,7 @@ export default function Header({ variant }) {
                   >
                     <li>
                       <NavLink
-                        to="#about"
+                        to="/#about"
                         onClick={() => setMobileToggle(false)}
                       >
                         PROJECT
@@ -50,7 +50,7 @@ export default function Header({ variant }) {
                     </li>
                     <li>
                       <NavLink
-                        to="#goals"
+                        to="/#goals"
                         onClick={() => setMobileToggle(false)}
                       >
                         GOALS & OBJECTIVES
@@ -58,14 +58,14 @@ export default function Header({ variant }) {
                     </li>
                     <li>
                       <NavLink
-                        to="#team"
+                        to="/#team"
                         onClick={() => setMobileToggle(false)}
                       >
                         OUR TEAM
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="#sponsor" onClick={() => setMobileToggle(false)}>
+                      <NavLink to="/#sponsor" onClick={() => setMobileToggle(false)}>
                       SPONSOR US
                       </NavLink>
                     </li>

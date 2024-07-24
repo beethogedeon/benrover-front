@@ -9,7 +9,7 @@ export default function FunFact({variant, title, subtitle, data}) {
       <Div className="cs-funfact_left">
         <Div className="cs-funfact_heading">
           <h2>{title}</h2>
-          <p>{subtitle}</p>
+          <p style={{textAlign: 'justify'}}>{subtitle}</p>
         </Div>
       </Div>
       <Div className="cs-funfact_right">
