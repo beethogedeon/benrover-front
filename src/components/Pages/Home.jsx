@@ -92,7 +92,7 @@ export default function Home() {
     <>
       {/* Start Hero Section */}
       <Hero
-        title="A rover<br/>for mars missions"
+        title="A rover<br/> for mars missions"
         subtitle="THIS PROJECT HAS BEEN BUILT BY A TEAM OF YOUNG BENIN ENGINEERS AND STUDENTS AS PART OF AFRICAN ROVER CHALLENGE."
         btnText="See one Github"
         btnLink="https://github.com/benrover-24"
@@ -108,7 +108,7 @@ export default function Home() {
         <FunFact
           variant="cs-type1"
           title="AFRICAN ROVER CHALLENGE"
-          subtitle="The challenge is to design and build a Mars rover prototype. This is not expected to be a space-grade machine and does not need to be ready to operate in actual space or Mars conditions.
+          subtitle="The challenge is to design and build a Mars rover prototype. This is not expected to be a space-grade machine and does not need to be ready to operate in actual space or Mars conditions.<br/><br/>
           It's a small, mobile robot, controlled wirelessly with an independent power source."
           data={funfaceData}
         />
@@ -285,13 +285,13 @@ export default function Home() {
       {/* Start LogoList Section */}
       <Div className="container">
         <Div className="row">
-        <Div className="col-xl-4">
+          <Div className="col-xl-4">
               <SectionHeading
                 title="Thanks for your support..."
                 subtitle="Our Sponsors"
               />
               <Spacing lg="90" md="45" />
-            </Div>
+          </Div>
         </Div>
         <LogoList />
       </Div>

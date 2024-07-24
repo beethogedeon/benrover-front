@@ -15,17 +15,17 @@ export default function ContactPage() {
   return (
     <>
       <PageHeading
-        title="Contact Us"
+        title="Donation"
         bgSrc="/images/contact_hero_bg.jpeg"
-        pageLinkText="Contact"
+        pageLinkText="Donation"
       />
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row">
           <Div className="col-lg-6">
             <SectionHeading
-              title="Do you have a project <br/>in your mind?"
-              subtitle="Getting Touch"
+              title="Help us to buy needed materials <br/>and training courses"
+              subtitle="Taking part of BenRover project"
             />
             <Spacing lg="55" md="30" />
             <ContactInfoWidget withIcon />
@@ -40,7 +40,7 @@ export default function ContactPage() {
               </Div>
               <Div className="col-sm-6">
                 <label className="cs-primary_color">Email*</label>
-                <input type="text" className="cs-form_field" />
+                <input type="email" className="cs-form_field" />
                 <Spacing lg="20" md="20" />
               </Div>
               <Div className="col-sm-6">

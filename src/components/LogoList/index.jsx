@@ -11,19 +11,7 @@ const partnerLogos = [
     alt: 'Partner',
   },
   {
-    src: '/images/semecity.png',
-    alt: 'Partner',
-  },
-  {
-    src: '/images/scop.png',
-    alt: 'Partner',
-  },
-  {
-    src: '/images/semecity.png',
-    alt: 'Partner',
-  },
-  {
-    src: '/images/scop.png',
+    src: '/images/tekbot.png',
     alt: 'Partner',
   },
 ];

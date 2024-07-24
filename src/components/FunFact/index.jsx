@@ -1,6 +1,7 @@
-import React from 'react'
-import Div from '../Div'
-import './funfact.scss'
+import React from 'react';
+import Div from '../Div';
+import './funfact.scss';
+import parse from 'html-react-parser';
 
 export default function FunFact({variant, title, subtitle, data}) {
   return (
@@ -9,7 +10,7 @@ export default function FunFact({variant, title, subtitle, data}) {
       <Div className="cs-funfact_left">
         <Div className="cs-funfact_heading">
           <h2>{title}</h2>
-          <p style={{textAlign: 'justify'}}>{subtitle}</p>
+          <p style={{textAlign: 'justify'}}>{parse(subtitle)}</p>
         </Div>
       </Div>
       <Div className="cs-funfact_right">

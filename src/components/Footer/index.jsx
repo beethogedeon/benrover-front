@@ -26,7 +26,7 @@ export default function Footer({ copyrightText, logoSrc, logoAlt, text }) {
             <Div className="col-lg-6 col-sm-6">
               <Div className="cs-footer_item">
                 <TextWidget
-                  logoSrc="/images/logo.png"
+                  logoSrc="/images/Tekbot_2.svg"
                   logoAlt="BenRover - Tekbot Robotics"
                   text=""
                 />
