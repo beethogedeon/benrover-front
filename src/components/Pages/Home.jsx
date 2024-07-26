@@ -303,7 +303,7 @@ export default function Home() {
         <Cta
           title="You can support<br /> <i>BenRover</i> by donating !"
           btnText="Donate"
-          btnLink="/contact"
+          btnLink="/donation"
           bgSrc="/images/cta_bg.png"
         />
       </Div>

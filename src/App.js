@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import AboutPage from './components/Pages/AboutPage';
-import ContactPage from './components/Pages/ContactPage';
+import DonationPage from './components/Pages/DonationPage';
 import ErrorPage from './components/Pages/ErrorPage';
 import Home from './components/Pages/Home';
 import TeamPage from './components/Pages/TeamPage';
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<AboutPage />} />
-          <Route path="contact" element={<ContactPage />} />
+          <Route path="donation" element={<DonationPage />} />
           <Route path="team" element={<TeamPage />} />
           <Route path="team/:teamDetails" element={<TeamDetails />} />
           <Route path="faq" element={<FaqPage />} />
