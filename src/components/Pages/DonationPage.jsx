@@ -61,6 +61,7 @@ export default function DonationPage() {
   };
 
   const handleSubmit = (e) => {
+    const FedaPay = window['FedaPay'];
     e.preventDefault();
     let widget = FedaPay.init({
       public_key: 'pk_live_ydVYNb58cjqTZPB8Gf_zLzYQ',
@@ -79,7 +80,7 @@ export default function DonationPage() {
         iso: formData['currency'],
       },
       onComplete(resp) {
-        const FedaPay = window['FedaPay'];
+        
         if (resp.reason === FedaPay.DIALOG_DISMISSED) {
           setModalMessage('You cancel your donation !');
           setIsModalOpen(true);
