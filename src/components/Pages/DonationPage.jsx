@@ -120,11 +120,11 @@ export default function DonationPage() {
           <Div className="col-lg-6">
       <form onSubmit={handleSubmit} className="row">
         <Div className="col-sm-6">
-          <label className="cs-primary_color">Full Name*</label>
+          <label className="cs-primary_color">First Name*</label>
           <input
             type="text"
-            name="fullName"
-            value={formData.fullName}
+            name="firstname"
+            value={formData.firstname}
             onChange={handleChange}
             className="cs-form_field"
             required
@@ -132,6 +132,18 @@ export default function DonationPage() {
           <Div className="spacing" style={{ margin: '20px 0' }}></Div>
         </Div>
         <Div className="col-sm-6">
+          <label className="cs-primary_color">Last Name*</label>
+          <input
+            type="text"
+            name="lastname"
+            value={formData.lastname}
+            onChange={handleChange}
+            className="cs-form_field"
+            required
+          />
+          <Div className="spacing" style={{ margin: '20px 0' }}></Div>
+        </Div>
+        <Div className="col-sm-12">
           <label className="cs-primary_color">Email*</label>
           <input
             type="email"
@@ -151,6 +163,7 @@ export default function DonationPage() {
             value={formData.amount}
             onChange={handleChange}
             className="cs-form_field"
+            min={100}
             required
           />
           <Div className="spacing" style={{ margin: '20px 0' }}></Div>
@@ -170,7 +183,7 @@ export default function DonationPage() {
           </select>
           <Div className="spacing" style={{ margin: '20px 0' }}></Div>
         </Div>
-        <Div className="col-sm-12">
+        {/*<Div className="col-sm-12">
           <label className="cs-primary_color">Payment Type*</label>
           <select
             name="paymentType"
@@ -184,7 +197,7 @@ export default function DonationPage() {
             <option value="Debit Card">Debit Card</option>
           </select>
           <Div className="spacing" style={{ margin: '20px 0' }}></Div>
-        </Div>
+        </Div>*/}
         <Div className="col-sm-12">
           <button className="cs-btn cs-style1">
           <span>Donate {formData['amount'] !== '' ? `${formData['amount']} ${currencySigns[formData['currency']]}` : ''}</span>

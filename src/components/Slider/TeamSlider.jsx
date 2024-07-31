@@ -5,7 +5,8 @@ import Div from '../Div';
 import Team from '../Team';
 const teamData = [
   {
-    memberImage: '/images/Teams/2.png',
+    memberImage: '/images/Teams/Mohamed.png',
+    memberImage2: '/images/Teams2/Mohamed.png',
     memberName: 'Mohamed SALIFOU',
     memberDesignation: 'Product Designer',
     memberSocial: {
@@ -14,7 +15,8 @@ const teamData = [
     },
   },
   {
-    memberImage: '/images/Teams/4.png',
+    memberImage: '/images/Teams/Prudence.png',
+    memberImage2: '/images/Teams2/Prudence.png',
     memberName: 'Prudence AYIVI',
     memberDesignation: 'Head of SpaceX Benin',
     memberSocial: {
@@ -23,7 +25,8 @@ const teamData = [
     },
   },
   {
-    memberImage: '/images/Teams/3.png',
+    memberImage: '/images/Teams/Haby.png',
+    memberImage2: '/images/Teams2/Haby.png',
     memberName: 'Haby SOW',
     memberDesignation: 'CEO@Company',
     memberSocial: {
@@ -32,7 +35,8 @@ const teamData = [
     },
   },
   {
-    memberImage: '/images/Teams/5.png',
+    memberImage: '/images/Teams/Arcady.png',
+    memberImage2: '/images/Teams2/Arcady.png',
     memberName: 'Arcady RODRIGUEZ',
     memberDesignation: 'Electromechanical Engineer',
     memberSocial: {
@@ -41,8 +45,39 @@ const teamData = [
     },
   },
   {
-    memberImage: '/images/Teams/1.png',
+    memberImage: '/images/Teams/Gedeon.png',
+    memberImage2: '/images/Teams2/Gedeon.png',
     memberName: 'Gedeon GBEDONOU',
+    memberDesignation: 'Software Engineer',
+    memberSocial: {
+      linkedin: 'https://linkedin.com/in/gedeongbedonou',
+      github: 'https://github.com/beethogedeon',
+    },
+  },
+  {
+    memberImage: '/images/Teams/Samir.png',
+    memberImage2: '/images/Teams2/Samir.png',
+    memberName: 'Samir BONI',
+    memberDesignation: 'Software Engineer',
+    memberSocial: {
+      linkedin: 'https://linkedin.com/in/gedeongbedonou',
+      github: 'https://github.com/beethogedeon',
+    },
+  },
+  {
+    memberImage: '/images/Teams/Sergino.png',
+    memberImage2: '/images/Teams2/Sergino.png',
+    memberName: 'Sergino BRADFORD',
+    memberDesignation: 'Software Engineer',
+    memberSocial: {
+      linkedin: 'https://linkedin.com/in/gedeongbedonou',
+      github: 'https://github.com/beethogedeon',
+    },
+  },
+  {
+    memberImage: '/images/Teams/Judicael.png',
+    memberImage2: '/images/Teams2/Judicael.png',
+    memberName: 'Judicael',
     memberDesignation: 'Software Engineer',
     memberSocial: {
       linkedin: 'https://linkedin.com/in/gedeongbedonou',
@@ -51,7 +86,7 @@ const teamData = [
   },
 ];
 
-export default function TeamSlider() {
+export default function TeamSlider({photomode}) {
   /** Team Member Data **/
 
   /** Slider Settings **/
@@ -119,7 +154,7 @@ export default function TeamSlider() {
       {teamData.map((item, index) => (
         <Div key={index}>
           <Team
-            memberImage={item.memberImage}
+            memberImage={photomode==="2"? item.memberImage2: item.memberImage}
             memberName={item.memberName}
             memberDesignation={item.memberDesignation}
             memberSocial={item.memberSocial}

@@ -179,7 +179,18 @@ export default function Home() {
           variant="cs-style1"
         />
         <Spacing lg="85" md="45" />
-        <TeamSlider />
+        <TeamSlider photomode="1"/>
+      </Div>
+      <Spacing lg="15" md="7" />
+
+      <Div className="container" id="team">
+        <SectionHeading
+          title="Awesome team <br/>members"
+          subtitle="Our Team"
+          variant="cs-style1"
+        />
+        <Spacing lg="85" md="45" />
+        <TeamSlider photomode="2"/>
       </Div>
       <Spacing lg="15" md="7" />
       {/* End Team Section */}
