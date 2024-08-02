@@ -83,7 +83,7 @@ const portfolioData = [
 ];
 
 export default function Home() {
-  pageTitle('Home');
+  pageTitle('Accueil');
 
   useEffect(() => {
     window.scrollTo(0, 0);
