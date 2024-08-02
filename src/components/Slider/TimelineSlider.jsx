@@ -6,20 +6,16 @@ import Timeline from '../Timeline';
 const timelineData = [
     [
       {
-      title: 'Build creativity',
-      text: 'The excitement in participating in this competition will enable students to learn and use their creativity building robots and opportunity to interact on many levels with others.',
+      title: 'Innovation Technologique',
+      text: 'En tant que premier rover construit au Bénin, nous contribuons à développer et à mettre en œuvre des technologies uniques pour révéler le potentiel technologique au Bénin pour résoudre des problèmes technologiques complexes.',
     },
-    {
-      title: 'Inspire African youth',
-      text: 'Inspiring African youth to be part of the Robotics, Space Technologies, and AI rush to conquer the world and outer space.',
-    }
-  ],
-  [
-    {
-      title: 'Boost innovation',
-      text: 'The competition is a continuous mentoring effort which is intended to educate the next generation of multidisciplinary engineers and others, boost innovation in research and business, and popularise STEM (Science, Technology, Engineering and Mathematics) advancements.',
-    }
-  ]
+    ],
+    [
+      {
+        title: 'Éducation et Sensibilisation',
+        text: "BenRover-24 est une opportunité pour mettre en œuvre les compétences acquises, d’inspirer et de former la prochaine génération d'ingénieurs pluridisciplinaires et à populariser les STIM (sciences, technologies, ingénierie et mathématiques).",
+      }
+    ]
 ];
 
 export default function TimelineSlider() {

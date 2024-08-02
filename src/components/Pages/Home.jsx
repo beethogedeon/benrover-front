@@ -12,6 +12,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 const Hero = React.lazy(() => import('../Hero'));
 const FunFact = React.lazy(() => import('../FunFact'));
+const RoverFeatSpecs = React.lazy(() => import('../RoverSpecs'));
 const Cta = React.lazy(() => import('../Cta'));
 const PortfolioSlider = React.lazy(() => import('../Slider/PortfolioSlider'));
 const TeamSlider = React.lazy(() => import('../Slider/TeamSlider'));
@@ -93,9 +94,9 @@ export default function Home() {
     <>
       {/* Start Hero Section */}
       <Hero
-        title="A rover<br/> for mars missions"
+        title="BenRover-24<br/> Pionniers de l'espace..."
         subtitle="THIS PROJECT HAS BEEN BUILT BY A TEAM OF YOUNG BENIN ENGINEERS AND STUDENTS AS PART OF AFRICAN ROVER CHALLENGE."
-        btnText="Voir sur Github"
+        btnText="Un rover conçu et fabriqué au Bénin pour les missions sur Mars."
         btnLink="https://github.com/benrover-24"
         scrollDownId="#gallery"
         socialLinksHeading="Suivez-nous"
@@ -108,9 +109,9 @@ export default function Home() {
       <div className="container" id="about">
         <FunFact
           variant="cs-type1"
-          title="AFRICAN ROVER CHALLENGE"
-          subtitle="The challenge is to design and build a Mars rover prototype. This is not expected to be a space-grade machine and does not need to be ready to operate in actual space or Mars conditions.<br/><br/>
-          It's a small, mobile robot, controlled wirelessly with an independent power source."
+          title="A Propos du projet"
+          subtitle="<b>BenRover-24</b> est un robot mobile d'exploration (astromobile ou rover) conçu pour explorer la surface de la planète Mars. Ce projet est conçu par une équipe de jeunes ingénieurs et étudiants passionnés d'espace et de technologie dans le cadre de l'African Rover Challenge.<br/><br/>
+Le challenge consiste à concevoir et à construire un prototype de rover martien. Il s'agit d'un petit robot mobile, contrôlé sans fil et doté d'une source d'énergie indépendante."
           data={funfaceData}
         />
       </div>
@@ -121,9 +122,23 @@ export default function Home() {
       {/* Start Portfolio Section */}
       <Spacing lg="150" md="50" />
       <Div>
+        <Div className="container" id="specs">
+          <SectionHeading
+            title="Fonctionnalités et Spéfications"
+            subtitle="Le rover"
+            variant="cs-style1 text-center"
+          />
+          <Spacing lg="90" md="45" />
+        </Div>
+        <RoverFeatSpecs/>
+      </Div>
+      {/* End Portfolio Section */}
+
+      <Spacing lg="150" md="50" />
+      <Div>
         <Div className="container" id="gallery">
           <SectionHeading
-            title="Look at our works"
+            title="Découvrez notre travail"
             subtitle="LA GALERIE"
             variant="cs-style1 text-center"
           />
@@ -175,8 +190,8 @@ export default function Home() {
       <Spacing lg="145" md="80" />
       <Div className="container" id="team">
         <SectionHeading
-          title="De magnifiques<br/>membres"
-          subtitle="Notre team"
+          title="Une équipe multidisciplinaire..."
+          subtitle="Notre équipe"
           variant="cs-style1"
         />
         <Spacing lg="85" md="45" />
@@ -238,8 +253,8 @@ export default function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="4 Departments to achieve that project"
-                subtitle="Our Team Departments"
+                title="4 sous-équipes pour réaliser ce projet"
+                subtitle="Nos sous-équipes"
               />
               <Spacing lg="90" md="45" />
             </Div>
@@ -248,7 +263,7 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Information Technology"
+                    title="Informatique"
                     link="https://benrover-24.github.io/docs/it"
                     src="/images/Departments/IT.png"
                     alt="IT Department"
@@ -258,7 +273,7 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Electronic"
+                    title="Electronique"
                     link="https://benrover-24.github.io/docs/electronics"
                     src="/images/Departments/Electronic.png"
                     alt="Electronic Department"
@@ -267,7 +282,7 @@ export default function Home() {
                 </Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Mechanic"
+                    title="Mécanique"
                     link="https://benrover-24.github.io/docs/mechanics"
                     src="/images/Departments/Mechanic.png"
                     alt="Mechanic Department"
@@ -277,7 +292,7 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Space science"
+                    title="Astronomie"
                     link="https://benrover-24.github.io/docs/space"
                     src="/images/Departments/Space.png"
                     alt="Space science Department"
@@ -299,8 +314,8 @@ export default function Home() {
         <Div className="row">
           <Div className="col-xl-4">
               <SectionHeading
-                title="Merci pour votre support..."
-                subtitle="Nos Sponsors"
+                title="Merci pour votre soutien..."
+                subtitle="Nos généreux sponsors et donateurs"
               />
               <Spacing lg="90" md="45" />
           </Div>
@@ -313,7 +328,7 @@ export default function Home() {
       {/* Start CTA Section */}
       <Div className="container" id="sponsor">
         <Cta
-          title="Vous pouvez support<br /> <i>BenRover</i> en faisant un simple geste !"
+          title="Vous pouvez soutenir<br /> notre projet en faisant un simple geste !"
           btnText="Faire un don"
           btnLink="/donation"
           bgSrc="/images/cta_bg.png"

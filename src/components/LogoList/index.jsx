@@ -14,6 +14,10 @@ const partnerLogos = [
     src: '/images/tekbot.png',
     alt: 'Partner',
   },
+  {
+    src: '/images/sirius.png',
+    alt: 'Partner',
+  },
 ];
 
 export default function LogoList() {

@@ -31,7 +31,7 @@ export default function DonationPage() {
     email: '',
     amount: '',
     currency: 'XOF', // default to USD
-    paymentType: 'Mobile payments'
+    paymentType: 'Paiements mobiles'
   });
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -110,8 +110,8 @@ export default function DonationPage() {
         <Div className="row">
           <Div className="col-lg-6">
             <SectionHeading
-              title="Help us to buy needed materials <br/>and training courses"
-              subtitle="Taking part of BenRover project"
+              title="Votre aide est nécessaire pour l'achat du matériel..."
+              subtitle="Participer au projet BenRover-24"
             />
             <Spacing lg="55" md="30" />
             {/*<ContactInfoWidget withIcon />*/}
@@ -120,7 +120,7 @@ export default function DonationPage() {
           <Div className="col-lg-6">
       <form onSubmit={handleSubmit} className="row">
         <Div className="col-sm-6">
-          <label className="cs-primary_color">First Name*</label>
+          <label className="cs-primary_color">Prénoms*</label>
           <input
             type="text"
             name="firstname"
@@ -132,7 +132,7 @@ export default function DonationPage() {
           <Div className="spacing" style={{ margin: '20px 0' }}></Div>
         </Div>
         <Div className="col-sm-6">
-          <label className="cs-primary_color">Last Name*</label>
+          <label className="cs-primary_color">Nom de famille*</label>
           <input
             type="text"
             name="lastname"
@@ -144,7 +144,7 @@ export default function DonationPage() {
           <Div className="spacing" style={{ margin: '20px 0' }}></Div>
         </Div>
         <Div className="col-sm-12">
-          <label className="cs-primary_color">Email*</label>
+          <label className="cs-primary_color">Adresse mail*</label>
           <input
             type="email"
             name="email"
@@ -156,7 +156,7 @@ export default function DonationPage() {
           <Div className="spacing" style={{ margin: '20px 0' }}></Div>
         </Div>
         <Div className="col-sm-6">
-          <label className="cs-primary_color">Donation Amount*</label>
+          <label className="cs-primary_color">Montant*</label>
           <input
             type="number"
             name="amount"
@@ -169,7 +169,7 @@ export default function DonationPage() {
           <Div className="spacing" style={{ margin: '20px 0' }}></Div>
         </Div>
         <Div className="col-sm-6">
-          <label className="cs-primary_color">Currency*</label>
+          <label className="cs-primary_color">Devise*</label>
           <select
             name="currency"
             value={formData.currency}
@@ -180,6 +180,7 @@ export default function DonationPage() {
           >
             <option value="XOF">FCFA</option>
             <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
           </select>
           <Div className="spacing" style={{ margin: '20px 0' }}></Div>
         </Div>
@@ -200,7 +201,7 @@ export default function DonationPage() {
         </Div>*/}
         <Div className="col-sm-12">
           <button className="cs-btn cs-style1">
-          <span>Donate {formData['amount'] !== '' ? `${formData['amount']} ${currencySigns[formData['currency']]}` : ''}</span>
+          <span>Faire un don {formData['amount'] !== '' ? `de ${formData['amount']} ${currencySigns[formData['currency']]}` : ''}</span>
           </button>
         </Div>
       </form>

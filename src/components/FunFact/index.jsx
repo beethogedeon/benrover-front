@@ -9,7 +9,7 @@ export default function FunFact({variant, title, subtitle, data}) {
       <Div className="cs-funfact_shape"  style={{backgroundImage: 'url(./images/funfact_shape_bg.svg)'}} />
       <Div className="cs-funfact_left">
         <Div className="cs-funfact_heading">
-          <h2>{title}</h2>
+          <h3>{title}</h3>
           <p style={{textAlign: 'justify'}}>{parse(subtitle)}</p>
         </Div>
       </Div>

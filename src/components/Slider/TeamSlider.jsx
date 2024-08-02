@@ -58,7 +58,7 @@ const teamData = [
     memberImage: '/images/Teams/Prudence.png',
     memberImage2: '/images/Teams2/Prudence.png',
     memberName: 'Prudence AYIVI',
-    memberDesignation: 'Head of SpaceX Benin',
+    memberDesignation: 'Space Science Specialist',
     memberSocial: {
       linkedin: 'https://linkedin.com/in/prudence-ayivi',
       github: 'https://github.com/PrudenceEA',
@@ -97,7 +97,7 @@ const teamData = [
   {
     memberImage: '/images/Teams/Sergino.png',
     memberImage2: '/images/Teams2/Sergino.png',
-    memberName: 'Sergino BRADFORD',
+    memberName: 'Sergino  GOUNOUKPEROU',
     memberDesignation: 'Software Engineer',
     memberSocial: {
       linkedin: 'https://linkedin.com/in/gedeongbedonou',
@@ -230,7 +230,7 @@ export default function TeamSlider({photomode}) {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     prevArrow: <SlickArrowLeft />,
     nextArrow: <SlickArrowRight />,
     responsive: [
@@ -238,22 +238,25 @@ export default function TeamSlider({photomode}) {
         breakpoint: 1200,
         settings: {
           slidesToShow: 3,
+          slidesToScroll: 3,
         },
       },
       {
         breakpoint: 991,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 2,
           dots: true,
-          arrows: false,
+          arrows: true,
         },
       },
       {
         breakpoint: 500,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
           dots: true,
-          arrows: false,
+          arrows: true,
         },
       },
     ],

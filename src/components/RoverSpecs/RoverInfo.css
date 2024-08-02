@@ -1,0 +1,36 @@
+/* src/RoverFeatureSection.css */
+
+.rover-feature-section {
+    padding: 1rem;
+  }
+  
+  .rover-3d {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Adjust height as needed */
+  }
+  
+  .tabs .tab-content {
+    display: none;
+  }
+  
+  .tabs .tab-content.active {
+    display: block;
+  }
+  
+  .toggle-button.active {
+    background-color: #c66948;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .rover-3d {
+      max-height: 300px; /* Adjust height for mobile view */
+    }
+  
+    .toggle-button.active {
+      background-color: #c66948;
+      color: white;
+    }
+  }
+  
