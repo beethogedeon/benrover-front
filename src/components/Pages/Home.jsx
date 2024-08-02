@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react';
 import Card from '../Card';
-import FunFact from '../FunFact';
-import Hero from '../Hero';
 import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
-import Cta from '../Cta';
 import LogoList from '../LogoList';
 import MovingText from '../MovingText';
-import PortfolioSlider from '../Slider/PortfolioSlider';
-import TeamSlider from '../Slider/TeamSlider';
 import VideoModal from '../VideoModal';
 import TimelineSlider from '../Slider/TimelineSlider';
 import { pageTitle } from '../../helper';
 import { HashLink as Link } from 'react-router-hash-link';
+
+const Hero = React.lazy(() => import('../Hero'));
+const FunFact = React.lazy(() => import('../FunFact'));
+const Cta = React.lazy(() => import('../Cta'));
+const PortfolioSlider = React.lazy(() => import('../Slider/PortfolioSlider'));
+const TeamSlider = React.lazy(() => import('../Slider/TeamSlider'));
 // Hero Social Links
 const heroSocialLinks = [
   {
@@ -36,46 +37,46 @@ const funfaceData = [
 const portfolioData = [
   {
     title: 'Rover Conception',
-    subtitle: 'See Details',
+    subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
     src: '/images/Gallery/1.png',
   },
   {
     title: 'Rover Conception',
-    subtitle: 'See Details',
+    subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
     src: '/images/Gallery/2.png',
   },
   {
     title: 'Rover Conception',
-    subtitle: 'See Details',
+    subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
     src: '/images/Gallery/3.png',
   },
   {
     title: 'Engine',
-    subtitle: 'See Details',
+    subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
     src: '/images/Gallery/4.png',
   },
 
   {
     title: '3D Printing',
-    subtitle: 'See Details',
+    subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
     src: '/images/Gallery/5.png',
   },
 
   {
     title: 'Electronic',
-    subtitle: 'See Details',
+    subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
     src: '/images/Gallery/6.png',
   },
 
   {
     title: 'Electronic',
-    subtitle: 'See Details',
+    subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
     src: '/images/Gallery/7.png',
   },
@@ -94,10 +95,10 @@ export default function Home() {
       <Hero
         title="A rover<br/> for mars missions"
         subtitle="THIS PROJECT HAS BEEN BUILT BY A TEAM OF YOUNG BENIN ENGINEERS AND STUDENTS AS PART OF AFRICAN ROVER CHALLENGE."
-        btnText="See one Github"
+        btnText="Voir sur Github"
         btnLink="https://github.com/benrover-24"
         scrollDownId="#gallery"
-        socialLinksHeading="Follow Us"
+        socialLinksHeading="Suivez-nous"
         heroSocialLinks={heroSocialLinks}
         bgImageUrl="/images/hero.jpg"
       />
@@ -123,7 +124,7 @@ export default function Home() {
         <Div className="container" id="gallery">
           <SectionHeading
             title="Look at our works"
-            subtitle="OUR GALLERY"
+            subtitle="LA GALERIE"
             variant="cs-style1 text-center"
           />
           <Spacing lg="90" md="45" />
@@ -142,8 +143,8 @@ export default function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="Build - Boost - Inspire"
-                subtitle="OUR GOALS & OBJECTIVES"
+                title="Construire - Booster - Inspirer"
+                subtitle="NOS OBJECTIFS"
                 variant="cs-style1"
               />
               <Spacing lg="90" md="45" />
@@ -160,7 +161,7 @@ export default function Home() {
       <Spacing lg="130" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
-        We're still building...
+        Nous y travaillons...
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
@@ -174,14 +175,14 @@ export default function Home() {
       <Spacing lg="145" md="80" />
       <Div className="container" id="team">
         <SectionHeading
-          title="Awesome team <br/>members"
-          subtitle="Our Team"
+          title="De magnifiques<br/>membres"
+          subtitle="Notre team"
           variant="cs-style1"
         />
         <Spacing lg="85" md="45" />
         <TeamSlider photomode="1"/>
       </Div>
-      <Spacing lg="15" md="7" />
+      {/*<Spacing lg="15" md="7" />
 
       <Div className="container" id="team">
         <SectionHeading
@@ -192,7 +193,7 @@ export default function Home() {
         <Spacing lg="85" md="45" />
         <TeamSlider photomode="2"/>
       </Div>
-      <Spacing lg="15" md="7" />
+      <Spacing lg="15" md="7" />*/}
       {/* End Team Section */}
 
       {/* Start Testimonial Section */}
@@ -228,7 +229,7 @@ export default function Home() {
 
       {/* Start MovingText Section */}
       <Spacing lg="125" md="70" />
-      <MovingText text="Keep moving forward !" />
+      <MovingText text="Le Bénin révélé !  " />
 
       {/* Start Service Section */}
       <Spacing lg="150" md="80" />
@@ -298,8 +299,8 @@ export default function Home() {
         <Div className="row">
           <Div className="col-xl-4">
               <SectionHeading
-                title="Thanks for your support..."
-                subtitle="Our Sponsors"
+                title="Merci pour votre support..."
+                subtitle="Nos Sponsors"
               />
               <Spacing lg="90" md="45" />
           </Div>
@@ -312,8 +313,8 @@ export default function Home() {
       {/* Start CTA Section */}
       <Div className="container" id="sponsor">
         <Cta
-          title="You can support<br /> <i>BenRover</i> by donating !"
-          btnText="Donate"
+          title="Vous pouvez support<br /> <i>BenRover</i> en faisant un simple geste !"
+          btnText="Faire un don"
           btnLink="/donation"
           bgSrc="/images/cta_bg.png"
         />

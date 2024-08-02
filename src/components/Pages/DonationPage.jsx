@@ -64,7 +64,7 @@ export default function DonationPage() {
     const FedaPay = window['FedaPay'];
     e.preventDefault();
     let widget = FedaPay.init({
-      public_key: 'pk_live_ydVYNb58cjqTZPB8Gf_zLzYQ',
+      public_key: process.env.REACT_APP_FEDAPAY_KEY,
       environment: 'live',
       locale: locale,
       transaction: {
