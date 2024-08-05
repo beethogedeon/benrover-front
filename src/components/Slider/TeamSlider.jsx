@@ -5,46 +5,6 @@ import Div from '../Div';
 import Team from '../Team';
 const teamData = [
   {
-    memberImage: '/images/Teams/Haby.png',
-    memberImage2: '/images/Teams2/Haby.png',
-    memberName: 'Haby SOW',
-    memberDesignation: 'Electronic Engineer',
-    memberSocial: {
-      linkedin: 'https://linkedin.com/in/yay%C3%A9-haby-sow-b61b2b236',
-      github: '/',
-    },
-  },
-  {
-    memberImage: '/images/Teams/Edwige.png',
-    memberImage2: '/images/Teams2/Edwige.png',
-    memberName:'Edwige KPADONOU',
-    memberDesignation: 'Mechanical Engineering Student',
-    memberSocial: {
-      linkedin: 'https://linkedin.com/in/edwige-kpadonou-b2782a320',
-      github: 'https://github.com/',
-    },
-  },
-  {
-    memberImage: '/images/Teams/Hortence.png',
-    memberImage2: '/images/Teams2/Hortence.png',
-    memberName:'Hortence AZANDOSSESSI',
-    memberDesignation: 'Software Engineering Student',
-    memberSocial: {
-      linkedin: 'https://www.linkedin.com/in/hortence-azandossessi/',
-      github: 'https://github.com/',
-    },
-  },
-  {
-    memberImage: '/images/Teams/Asma.png',
-    memberImage2: '/images/Teams2/Asma.png',
-    memberName:'Asmaa KORA ZAKI',
-    memberDesignation: 'Mechanical Engineering Student',
-    memberSocial: {
-      linkedin: 'https://www.linkedin.com/in/asmaa-kora-zaki-151b3a22a/',
-      github: 'https://github.com/',
-    },
-  },
-  {
     memberImage: '/images/Teams/Mohamed.png',
     memberImage2: '/images/Teams2/Mohamed.png',
     memberName: 'Mohamed SALIFOU',
@@ -65,6 +25,16 @@ const teamData = [
     },
   },
   {
+    memberImage: '/images/Teams/Haby.png',
+    memberImage2: '/images/Teams2/Haby.png',
+    memberName: 'Haby SOW',
+    memberDesignation: 'Electronic Engineer',
+    memberSocial: {
+      linkedin: 'https://linkedin.com/in/yay%C3%A9-haby-sow-b61b2b236',
+      github: '/',
+    },
+  },
+  {
     memberImage: '/images/Teams/Arcady.png',
     memberImage2: '/images/Teams2/Arcady.png',
     memberName: 'Arcady RODRIGUEZ',
@@ -74,6 +44,48 @@ const teamData = [
       github: 'https://github.com/0v3rs1gh73r22',
     },
   },
+  {
+    memberImage: '/images/Teams/Elfried.png',
+    memberImage2: '/images/Teams2/Elfried.png',
+    memberName: 'Elfried KINZOUN',
+    memberDesignation: 'Étudiant en IA',
+    memberSocial: {
+      linkedin: 'https://www.linkedin.com/in/elfried-kinzoun-858063278',
+      github: 'https://github.com/elfried96',
+    },
+  },
+  {
+    memberImage: '/images/Teams/Sergino.png',
+    memberImage2: '/images/Teams2/Sergino.png',
+    memberName: 'Sergino  GOUNOUKPEROU',
+    memberDesignation: 'Software Engineer',
+    memberSocial: {
+      linkedin: 'https://linkedin.com/in/gedeongbedonou',
+      github: 'https://github.com/beethogedeon',
+    },
+  },
+  {
+    memberImage: '/images/Teams/Edwige.png',
+    memberImage2: '/images/Teams2/Edwige.png',
+    memberName:'Edwige KPADONOU',
+    memberDesignation: 'Mechanical Engineering Student',
+    memberSocial: {
+      linkedin: 'https://linkedin.com/in/edwige-kpadonou-b2782a320',
+      github: 'https://github.com/',
+    },
+  },
+  
+  {
+    memberImage: '/images/Teams/Judicael.png',
+    memberImage2: '/images/Teams2/Judicael.png',
+    memberName: 'Judicaël ADIKPETO',
+    memberDesignation: 'Telecoms and ICT Engineering Technician',
+    memberSocial: {
+      linkedin: 'https://www.linkedin.com/in/judica%C3%ABl-mahoukp%C3%A8-adikpeto-40411120b/',
+      github: 'https://github.com/iudhael/',
+    },
+  },
+  
   {
     memberImage: '/images/Teams/Gedeon.png',
     memberImage2: '/images/Teams2/Gedeon.png',
@@ -94,24 +106,15 @@ const teamData = [
       github: 'https://github.com/sam24-ds',
     },
   },
+  
   {
-    memberImage: '/images/Teams/Sergino.png',
-    memberImage2: '/images/Teams2/Sergino.png',
-    memberName: 'Sergino  GOUNOUKPEROU',
-    memberDesignation: 'Software Engineer',
+    memberImage: '/images/Teams/Asma.png',
+    memberImage2: '/images/Teams2/Asma.png',
+    memberName:'Asmaa KORA ZAKI',
+    memberDesignation: 'Mechanical Engineering Student',
     memberSocial: {
-      linkedin: 'https://linkedin.com/in/gedeongbedonou',
-      github: 'https://github.com/beethogedeon',
-    },
-  },
-  {
-    memberImage: '/images/Teams/Judicael.png',
-    memberImage2: '/images/Teams2/Judicael.png',
-    memberName: 'Judicaël ADIKPETO',
-    memberDesignation: 'Telecoms and ICT Engineering Technician',
-    memberSocial: {
-      linkedin: 'https://www.linkedin.com/in/judica%C3%ABl-mahoukp%C3%A8-adikpeto-40411120b/',
-      github: 'https://github.com/iudhael/',
+      linkedin: 'https://www.linkedin.com/in/asmaa-kora-zaki-151b3a22a/',
+      github: 'https://github.com/',
     },
   },
   {
@@ -135,13 +138,13 @@ const teamData = [
     },
   },
   {
-    memberImage: '/images/Teams/Elfried.png',
-    memberImage2: '/images/Teams2/Elfried.png',
-    memberName: 'Elfried KINZOUN',
-    memberDesignation: 'Étudiant en IA',
+    memberImage: '/images/Teams/Hortence.png',
+    memberImage2: '/images/Teams2/Hortence.png',
+    memberName:'Hortence AZANDOSSESSI',
+    memberDesignation: 'Software Engineering Student',
     memberSocial: {
-      linkedin: 'https://www.linkedin.com/in/elfried-kinzoun-858063278',
-      github: 'https://github.com/elfried96',
+      linkedin: 'https://www.linkedin.com/in/hortence-azandossessi/',
+      github: 'https://github.com/',
     },
   },
   {
@@ -155,6 +158,16 @@ const teamData = [
     },
   },
   {
+    memberImage: '/images/Teams/Eliakim.png',
+    memberImage2: '/images/Teams2/Eliakim.png',
+    memberName: 'Eliakim GOUNON',
+    memberDesignation: 'Software Engineer',
+    memberSocial: {
+      linkedin: 'https://linkedin.com/in/eliakimceleste',
+      github: 'https://github.com/eliakimceleste',
+    },
+  },
+  {
     memberImage: '/images/Teams/Turibio.png',
     memberImage2: '/images/Teams2/Turibio.png',
     memberName: 'Turibio KEKE',
@@ -162,16 +175,6 @@ const teamData = [
     memberSocial: {
       linkedin: 'https://linkedin.com/in/MahuviviTuribio',
       github: 'https://github.com/turibiok',
-    },
-  },
-  {
-    memberImage: '/images/Teams/Eliakim.png',
-    memberImage2: '/images/Teams2/Eliakim.png',
-    memberName: 'Eliakim GOUNON',
-    memberDesignation: 'Software Engineer',
-    memberSocial: {
-      linkedin: 'https://linkedin.com/in/eliakimceleste',
-      github: '#',
     },
   },
   {

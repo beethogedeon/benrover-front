@@ -5,6 +5,13 @@ import './header.scss';
 import ContactInfoWidget from '../Widget/ContactInfoWidget';
 import Div from '../Div';
 
+const navItems = [
+  { to: '#about', label: 'A PROPOS' },
+  { to: '#gallery', label: 'GALERIE' },
+  { to: '#team', label: 'NOTRE EQUIPE' },
+  { to: '/donation', label: 'SPONSORISEZ-NOUS' }
+];
+
 export default function Header({ variant }) {
   const [isSticky, setIsSticky] = useState(false);
   const [sideHeaderToggle, setSideHeaderToggle] = useState(false);
@@ -40,40 +47,16 @@ export default function Header({ variant }) {
                     className="cs-nav_list"
                     style={{ display: `${mobileToggle ? 'block' : 'none'}` }}
                   >
-                    <li>
-                      <NavLink
-                        to="/#about"
-                        onClick={() => setMobileToggle(false)}
-                      >
-                        PROJECT
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/#goals"
-                        onClick={() => setMobileToggle(false)}
-                      >
-                        GOALS & OBJECTIVES
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/#team"
-                        onClick={() => setMobileToggle(false)}
-                      >
-                        OUR TEAM
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/#sponsor" onClick={() => setMobileToggle(false)}>
-                      SPONSOR US
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/" onClick={() => setMobileToggle(false)}>
-                      CONTACT US
-                      </NavLink>
-                    </li>
+                    {navItems.map((item, index) => (
+        <li key={index}>
+          <NavLink
+            to={item.to}
+            onClick={() => setMobileToggle(false)}
+          >
+            {item.label}
+          </NavLink>
+        </li>
+      ))}
                   </ul>
                   <span
                     className={

@@ -26,10 +26,11 @@ export default function Hero({
       <Div className="container">
         <Div className="cs-hero_text">
           <h2 className="cs-hero_title">{parse(title)}</h2>
-          <Div className="cs-hero_info">
+          <h4 className="display-2"><i>Pionniers de l'espace...</i></h4>
+          <Div>
             <Div>
               {/*<Button btnLink={btnLink} btnText={btnText} />*/}
-              <h3 className="cs-section_subtitle">{btnText}</h3>
+              <span className="display-6 tracking-tighter">{parse(btnText)}</span>
             </Div>
           </Div>
         </Div>

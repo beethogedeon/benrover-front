@@ -37,46 +37,46 @@ const funfaceData = [
 ];
 const portfolioData = [
   {
-    title: 'Rover Conception',
+    title: 'Conception 3D du rover',
     subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
     src: '/images/Gallery/1.png',
   },
   {
-    title: 'Rover Conception',
+    title: 'Conception 3D du rover',
     subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
     src: '/images/Gallery/2.png',
   },
   {
-    title: 'Rover Conception',
+    title: 'Conception 3D du rover',
     subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
     src: '/images/Gallery/3.png',
   },
   {
-    title: 'Engine',
+    title: 'Méchanique',
     subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
     src: '/images/Gallery/4.png',
   },
 
   {
-    title: '3D Printing',
+    title: 'Impression 3D',
     subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
     src: '/images/Gallery/5.png',
   },
 
   {
-    title: 'Electronic',
+    title: 'Electronique',
     subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
     src: '/images/Gallery/6.png',
   },
 
   {
-    title: 'Electronic',
+    title: 'Electronique',
     subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
     src: '/images/Gallery/7.png',
@@ -94,9 +94,9 @@ export default function Home() {
     <>
       {/* Start Hero Section */}
       <Hero
-        title="BenRover-24<br/> Pionniers de l'espace..."
+        title="BenRover-24,"
         subtitle="THIS PROJECT HAS BEEN BUILT BY A TEAM OF YOUNG BENIN ENGINEERS AND STUDENTS AS PART OF AFRICAN ROVER CHALLENGE."
-        btnText="Un rover conçu et fabriqué au Bénin pour les missions sur Mars."
+        btnText="Un <mark>rover</mark> conçu et <mark>fabriqué au Bénin</mark> pour les missions sur <mark>Mars</mark>."
         btnLink="https://github.com/benrover-24"
         scrollDownId="#gallery"
         socialLinksHeading="Suivez-nous"
@@ -110,7 +110,7 @@ export default function Home() {
         <FunFact
           variant="cs-type1"
           title="A Propos du projet"
-          subtitle="<b>BenRover-24</b> est un robot mobile d'exploration (astromobile ou rover) conçu pour explorer la surface de la planète Mars. Ce projet est conçu par une équipe de jeunes ingénieurs et étudiants passionnés d'espace et de technologie dans le cadre de l'African Rover Challenge.<br/><br/>
+          subtitle="<b>BenRover-24</b> est un robot mobile d'exploration (<i>astromobile ou rover</i>) conçu pour explorer la surface de la planète Mars. Ce projet est conçu par une équipe de jeunes ingénieurs et étudiants passionnés d'espace et de technologie dans le cadre de l'African Rover Challenge.<br/><br/>
 Le challenge consiste à concevoir et à construire un prototype de rover martien. Il s'agit d'un petit robot mobile, contrôlé sans fil et doté d'une source d'énergie indépendante."
           data={funfaceData}
         />

@@ -2,12 +2,41 @@ import React, { useState, useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { Tab, Tabs } from 'react-bootstrap';
+import './RoverInfo.css';
 
 const features = [
-  { title: 'Feature 1', description: 'Description of Feature 1' },
-  { title: 'Feature 2', description: 'Description of Feature 2' },
-  // Add more features as needed
+  {
+    title: "Contrôle à distance",
+    description: "Le rover peut être contrôlé à distance par un opérateur via une télécommande, permettant une manipulation précise et une navigation guidée."
+  },
+  {
+    title: "Analyse et adaptation environnementale",
+    description: "Capacité d'analyser son environnement immédiat et de s'y adapter, utilisant des capteurs et des algorithmes pour naviguer efficacement dans divers terrains."
+  },
+  {
+    title: "Franchissement d'obstacles",
+    description: "Mécanismes permettant au rover de surmonter des obstacles tels que des pierres ou des trous, assurant une mobilité optimale sur des terrains accidentés."
+  },
+  {
+    title: "Autonomie énergétique",
+    description: "Système d'alimentation électrique autonome, potentiellement utilisant des panneaux solaires ou d'autres sources d'énergie renouvelable pour une indépendance énergétique prolongée."
+  },
+  {
+    title: "Communication à longue distance",
+    description: "Système de communication permettant au rover d'échanger des données et de recevoir des commandes du centre de contrôle, même à grande distance."
+  },
+  {
+    title: "Autonomie pour tâches spécifiques",
+    description: "Capacité d'exécuter certaines tâches de manière autonome, sans intervention humaine directe, grâce à des algorithmes d'intelligence artificielle et des protocoles préprogrammés."
+  },
+  {
+    title: "Conformité aux normes de sécurité",
+    description: "Intégration de dispositifs et de protocoles assurant le respect des normes de sécurité en vigueur, pour protéger le rover, son environnement et les potentiels opérateurs."
+  },
+  {
+    title: "Interface de diffusion d'informations",
+    description: "Système permettant de diffuser en temps réel des informations collectées par le rover via une interface utilisateur, facilitant la surveillance et l'analyse des données."
+  }
 ];
 
 const specifications = [
@@ -99,41 +128,63 @@ const RoverInfo = ({ modelUrl }) => {
         </div>
         <div className="col-lg-6">
           <div className="d-none d-lg-block">
-            <Tabs
-              activeKey={activeTab}
-              onSelect={(k) => setActiveTab(k)}
-              className="mb-3"
+            <ul className="nav nav-pills nav-justified mb-3" role="tablist">
+          <li className="nav-item" role="presentation">
+            <button
+              className={`nav-link h3 ${activeTab === 'features' ? 'active' : ''}`}
+              onClick={() => setActiveTab('features')}
+              role="tab"
+              aria-controls="features"
+              aria-selected={activeTab === 'features'}
             >
-              <Tab 
-                eventKey="features" 
-                title="Fonctionnalités"
-                tabClassName={activeTab === 'features' ? 'active' : ''}
-              >
-                <h3>Fonctionnalités</h3>
-                <ul>
-                  {features.map((feature, index) => (
-                    <li key={index}>
-                      <strong>{feature.title}:</strong> {feature.description}
-                    </li>
-                  ))}
-                </ul>
-                
-              </Tab>
-              <Tab 
-                eventKey="specs" 
-                title="Spécifications"
-                tabClassName={activeTab === 'specs' ? 'active' : ''}
-                >
-                <h3>Spécifications</h3>
-                <ul>
-                {specifications.map((specification, index) => (
-                    <li key={index}>
-                      <strong>{specification.spec}:</strong> {specification.value}
-                    </li>
-                  ))}
-                </ul>
-              </Tab>
-            </Tabs>
+              Fonctionnalités
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className={`nav-link h3 ${activeTab === 'specs' ? 'active' : ''}`}
+              onClick={() => setActiveTab('specs')}
+              role="tab"
+              aria-controls="specs"
+              aria-selected={activeTab === 'specs'}
+            >
+              Spécifications
+            </button>
+          </li>
+        </ul>
+
+        <div className="tab-content">
+          <div
+            className={`tab-pane fade ${activeTab === 'features' ? 'show active' : ''}`}
+            id="features"
+            role="tabpanel"
+          >
+            <h3 className='text-center'>Fonctionnalités</h3>
+            <ul className='text-justify'>
+              {features.map((feature, index) => (
+                <li key={index}>
+                  <strong>{feature.title}:</strong> {feature.description}
+                  <br />
+                  <br />
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div
+            className={`tab-pane fade ${activeTab === 'specs' ? 'show active' : ''}`}
+            id="specs"
+            role="tabpanel"
+          >
+            <h3 className='text-center'>Spécifications</h3>
+            <ul>
+              {specifications.map((specification, index) => (
+                <li key={index}>
+                  <strong>{specification.spec}:</strong> {specification.value}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
           </div>
           <div className="d-lg-none">
             <div className="mb-3">
@@ -144,7 +195,7 @@ const RoverInfo = ({ modelUrl }) => {
                 <ul>
                 {features.map((feature, index) => (
                   <li key={index}>
-                    <strong>{feature.title}:</strong> {feature.description}
+                    <strong>{feature.title} :</strong> {feature.description}
                   </li>
                 ))}
               </ul>
