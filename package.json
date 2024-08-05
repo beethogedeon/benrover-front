@@ -13,6 +13,7 @@
     "dotenv": "^16.4.5",
     "html-react-parser": "^3.0.4",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.4",
     "react-cart-lightgallery": "^1.3.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",

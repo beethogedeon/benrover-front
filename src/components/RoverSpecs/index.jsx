@@ -3,7 +3,7 @@ import RoverInfo from './RoverInfo';
 
 const RoverFeatSpecs = () => {
   return (
- <RoverInfo />
+  <RoverInfo modelUrl="/models/rover.glb" />
   );
 };
 

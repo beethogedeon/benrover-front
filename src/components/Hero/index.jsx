@@ -29,7 +29,7 @@ export default function Hero({
           <Div className="cs-hero_info">
             <Div>
               {/*<Button btnLink={btnLink} btnText={btnText} />*/}
-              <h3 class="cs-section_subtitle">{btnText}</h3>
+              <h3 className="cs-section_subtitle">{btnText}</h3>
             </Div>
           </Div>
         </Div>
