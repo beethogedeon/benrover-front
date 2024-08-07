@@ -6,9 +6,9 @@ import ContactInfoWidget from '../Widget/ContactInfoWidget';
 import Div from '../Div';
 
 const navItems = [
-  { to: '#about', label: 'A PROPOS' },
-  { to: '#gallery', label: 'GALERIE' },
-  { to: '#team', label: 'NOTRE EQUIPE' },
+  { to: '/#about', label: 'A PROPOS' },
+  { to: '/#gallery', label: 'GALERIE' },
+  { to: '/#team', label: 'NOTRE EQUIPE' },
   { to: '/donation', label: 'SPONSORISEZ-NOUS' }
 ];
 
