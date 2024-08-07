@@ -9,7 +9,6 @@ const navItems = [
   { to: '/#about', label: 'A PROPOS' },
   { to: '/#gallery', label: 'GALERIE' },
   { to: '/#team', label: 'NOTRE EQUIPE' },
-  { to: '/donation', label: 'SPONSORISEZ-NOUS' }
 ];
 
 export default function Header({ variant }) {
@@ -49,14 +48,18 @@ export default function Header({ variant }) {
                   >
                     {navItems.map((item, index) => (
         <li key={index}>
-          <NavLink
-            to={item.to}
-            onClick={() => setMobileToggle(false)}
-          >
-            {item.label}
-          </NavLink>
+          <a href={item.to} onClick={() => setMobileToggle(false)} class="active">{item.label}</a>
         </li>
       ))}
+      <li>
+        <NavLink
+        to="/donation"
+        onClick={() => setMobileToggle(false)}
+        className='active'
+        >
+          SPONSORIEZ-NOUS
+        </NavLink>
+      </li>
                   </ul>
                   <span
                     className={

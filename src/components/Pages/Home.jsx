@@ -40,46 +40,46 @@ const portfolioData = [
     title: 'Conception 3D du rover',
     subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
-    src: '/images/Gallery/1.png',
+    src: '/images/Gallery/1.webp',
   },
   {
     title: 'Conception 3D du rover',
     subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
-    src: '/images/Gallery/2.png',
+    src: '/images/Gallery/2.webp',
   },
   {
     title: 'Conception 3D du rover',
     subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
-    src: '/images/Gallery/3.png',
+    src: '/images/Gallery/3.webp',
   },
   {
     title: 'Méchanique',
     subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
-    src: '/images/Gallery/4.png',
+    src: '/images/Gallery/4.webp',
   },
 
   {
     title: 'Impression 3D',
     subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
-    src: '/images/Gallery/5.png',
+    src: '/images/Gallery/5.webp',
   },
 
   {
     title: 'Electronique',
     subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
-    src: '/images/Gallery/6.png',
+    src: '/images/Gallery/6.webp',
   },
 
   {
     title: 'Electronique',
     subtitle: 'Voir les détails',
     href: 'https://benrover-24.github.io/docs',
-    src: '/images/Gallery/7.png',
+    src: '/images/Gallery/7.webp',
   },
 ];
 
@@ -101,7 +101,7 @@ export default function Home() {
         scrollDownId="#gallery"
         socialLinksHeading="Suivez-nous"
         heroSocialLinks={heroSocialLinks}
-        bgImageUrl="/images/hero.jpg"
+        bgImageUrl="/images/hero.webp"
       />
       {/* End Hero Section */}
 
