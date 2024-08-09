@@ -6,9 +6,13 @@ import ContactInfoWidget from '../Widget/ContactInfoWidget';
 import Div from '../Div';
 
 const navItems = [
-  { to: '/#about', label: 'A PROPOS' },
-  { to: '/#gallery', label: 'GALERIE' },
-  { to: '/#team', label: 'NOTRE EQUIPE' },
+  { to: '/', label: 'Accueil' },
+  { to: '/team', label: 'Notre équipe' },
+  { to: '/competitions', label: 'Compétitions' },
+  { to: '/rovers', label: 'Rovers' },
+  { to: '/partners', label: 'Partenaires' },
+  { to: '/gallery', label: 'Galerie' },
+  { to: '/donation', label: 'Sponsorisez-nous' },
 ];
 
 export default function Header({ variant }) {
@@ -48,18 +52,16 @@ export default function Header({ variant }) {
                   >
                     {navItems.map((item, index) => (
         <li key={index}>
-          <a href={item.to} onClick={() => setMobileToggle(false)} class="active">{item.label}</a>
-        </li>
-      ))}
-      <li>
-        <NavLink
-        to="/donation"
+          {/*<a href={item.to} onClick={() => setMobileToggle(false)} class="active">{item.label}</a>*/}
+          <NavLink
+        to={item.to}
         onClick={() => setMobileToggle(false)}
         className='active'
         >
-          SPONSORIEZ-NOUS
+          {item.label}
         </NavLink>
-      </li>
+        </li>
+      ))}
                   </ul>
                   <span
                     className={
@@ -108,7 +110,7 @@ export default function Header({ variant }) {
         />
         <Div className="cs-side_header_in">
           <Div className="cs-side_header_box">
-            <ContactInfoWidget title="Contact Us" withIcon />
+            <ContactInfoWidget title="Contactez-nous" withIcon />
           </Div>
           <Div className="cs-side_header_box">
             <SocialWidget />

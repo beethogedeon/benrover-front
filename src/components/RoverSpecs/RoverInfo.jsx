@@ -77,6 +77,12 @@ const RoverInfo = ({ modelUrl }) => {
     rendererRef.current = renderer;
 
     const controls = new OrbitControls(camera, renderer.domElement);
+    //controls.minZoom = -300;
+    //controls.maxZoom = 0;
+    //controls.zoom0=10;
+    controls.zoomSpeed=5;
+    controls.minDistance=200;
+    controls.maxDistance=100;
     controlsRef.current = controls;
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
