@@ -5,6 +5,7 @@ import PageHeading from '../PageHeading';
 import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
+import Competitions from '../Competitions';
 
 export default function CompetitionsPage() {
     pageTitle('Compétitions');
@@ -19,6 +20,7 @@ export default function CompetitionsPage() {
           title="African Rover Challenge"
           bgSrc="images/team-hero-bg.webp"
           pageLinkText="Competitions"
+          subText="Organisé par Cars4Mars"
         />
         <Spacing lg="145" md="80" />
         <Div className="container">
@@ -27,6 +29,8 @@ export default function CompetitionsPage() {
             subtitle="African Rover Challenge"
           />
           <Spacing lg="90" md="45" />
+          
+          <Competitions />
 
         <Div className="container">
           <Spacing lg="90" md="45" />
