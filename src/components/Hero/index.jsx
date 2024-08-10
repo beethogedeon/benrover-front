@@ -25,7 +25,7 @@ export default function Hero({
       <Div className="cs-shape_1" />
       <Div className="container">
         <Div className="cs-hero_text">
-          <h4 className="cs-hero_title">{parse(title)}</h4>
+          <h4 className="cs-hero_title d-inline">{parse(title)}</h4><h3 className='display-2 d-inline'><i>{' '}{subtitle}</i></h3>
           {/*<h4 className="display-2"><i>Pionniers du spatial au Bénin...</i></h4>*/}
           <Div>
             <Div>
@@ -36,9 +36,9 @@ export default function Hero({
         </Div>
       </Div>
       <VerticalLinks data={heroSocialLinks} title={socialLinksHeading} />
-      <a href={scrollDownId} className="cs-down_btn">
+      {/*<a href={scrollDownId} className="cs-down_btn">
         .
-      </a>
+      </a>*/}
     </Div>
   );
 }

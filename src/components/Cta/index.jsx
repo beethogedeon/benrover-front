@@ -17,13 +17,11 @@ export default function Cta({title, btnText, btnLink, bgSrc, variant}) {
         {btnText && (
           <>
             <Spacing lg='70' md='30' />
-            {/*<Button 
+            <Button 
               btnLink={btnLink}
               btnText={btnText}
-            />*/}
-            <NavLink to={btnLink} className={variant ? `cs-text_btn ${variant}` : 'cs-text_btn'}>
-              {btnText}
-            </NavLink>
+            />
+            
           </>
         )}
       </Div>

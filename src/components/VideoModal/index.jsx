@@ -6,8 +6,8 @@ export default function VideoModal({ videoSrc, bgUrl, variant }) {
   const [iframeSrc, setIframeSrc] = useState('about:blank');
   const [toggle, setToggle] = useState(false);
   const handelClick = () => {
-    const video = videoSrc.split('?v=')[1].trim();
-    setIframeSrc(`https://www.youtube.com/embed/${video}`);
+    //const video = videoSrc.split('?v=')[1].trim();
+    setIframeSrc(`${videoSrc}`);
     setToggle(!toggle);
   };
   const handelClose = () => {
@@ -34,11 +34,7 @@ export default function VideoModal({ videoSrc, bgUrl, variant }) {
           <Div className="cs-video_popup_container">
             <Div className="cs-video_popup_align">
               <Div className="embed-responsive embed-responsive-16by9">
-                <iframe
-                  className="embed-responsive-item"
-                  src={iframeSrc}
-                  title="video modal"
-                />
+                  <iframe src={iframeSrc} className='embed-responsive-item' frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"  title="video_bg"></iframe>
               </Div>
             </Div>
             <Div className="cs-video_popup_close" onClick={handelClose} />

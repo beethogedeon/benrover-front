@@ -22,13 +22,12 @@ export default function CompetitionsPage() {
           pageLinkText="Competitions"
           subText="Organisé par Cars4Mars"
         />
-        <Spacing lg="145" md="80" />
         <Div className="container">
-          <SectionHeading
+          {/*<SectionHeading
             title="Un événement incontournable pour les passionnés de la robotique."
             subtitle="African Rover Challenge"
           />
-          <Spacing lg="90" md="45" />
+          <Spacing lg="90" md="45" />*/}
           
           <Competitions />
 

@@ -1,7 +1,8 @@
 import React from "react";
-import { Container, Row, Col, Card, Button, Accordion } from 'react-bootstrap';
+import { Container, Row, Col, Card, Accordion } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
 import Spacing from "../Spacing";
+import Button from "../Button";
 //import { Calendar, Clock } from 'lucide-react';
 
 
@@ -37,7 +38,7 @@ const Competitions = () => {
         <Row className="mb-4">
           <Col>
             <h2 className="text-center mb-4">African Rover Challenge : Qu'est-ce que c'est ?</h2>
-            <p>
+            <p className="text-center">
               Il s'agit d'une compétition passionnante qui invite les étudiants à concevoir et construire un prototype de rover martien. Ce défi vise à stimuler l'innovation, la créativité et l'intérêt pour les technologies spatiales parmi les jeunes africains. Bien que le prototype ne soit pas destiné à fonctionner dans les conditions réelles de l'espace ou de Mars, il doit être un petit robot mobile, contrôlé sans fil et doté d'une source d'alimentation indépendante.
             </p>
           </Col>
@@ -45,7 +46,7 @@ const Competitions = () => {
 
         <Row className="mb-4">
           <Col md={6}>
-            <Card className="bg-dark text-light" style={{height: '600px'}}>
+            <Card className="bg-dark text-light" style={{height: '300px'}}>
               <Card.Header as="h3" className="text-center">Qui peut participer ?</Card.Header>
               <Card.Body>
                 <ul>
@@ -58,7 +59,7 @@ const Competitions = () => {
             </Card>
           </Col>
           <Col md={6}>
-            <Card className="bg-dark text-light" style={{height: '600px'}}>
+            <Card className="bg-dark text-light" style={{height: '300px'}}>
               <Card.Header as="h3" className="text-center">Quels sont les objectifs ?</Card.Header>
               <Card.Body>
                 <ul>
@@ -78,7 +79,7 @@ const Competitions = () => {
           <Col>
             <h2 className="text-center mb-3">Étapes de la compétition</h2>
             <Spacing lg="30" md="15" />
-            <Accordion className="text-light">
+            <Accordion className="text-light" >
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Étape de Lancement</Accordion.Header>
                 <Accordion.Body>
@@ -173,18 +174,26 @@ const Competitions = () => {
                 </ul>
                 <p>
                   Nous utilisons diverses ressources, dont les installations du "Sèmè City Open Park", pour développer notre rover innovant. Notre méthodologie de gestion de projet comprend des réunions régulières, des outils de gestion des tâches et un suivi continu des progrès.
-                </p>
-                <NavLink to="/teams" className="btn btn-primary mt-3">
-                  En savoir plus sur l'équipe BenRover
-                </NavLink>
+                </p><br />
+                <Row className="text-center">
+          <Col>
+          <Button 
+              btnLink="/team"
+              btnText="En savoir plus sur l'équipe BenRover"
+            />
+          </Col>
+          
+        </Row>
+                
               </Card.Body>
             </Card>
           </Col>
         </Row>
-
+        <Spacing lg="90" md="45" />
         <Row className="mb-4">
           <Col>
             <h2 className="text-center mb-3">Conception initiale du rover BenRover</h2>
+            <Spacing lg="30" md="15" />
             <Card className="bg-dark text-light">
               <Card.Body>
                 <h4>Conception mécanique :</h4>
@@ -210,9 +219,11 @@ const Competitions = () => {
 
         <Row className="text-center">
           <Col>
-            <NavLink className="btn-primary btn" size="lg" to="https://www.cars4mars.co.za" target="_blank">
-              En savoir plus sur Cars4Mars
-            </NavLink>
+            <Button 
+              btnLink="https://www.cars4mars.co.za"
+              target="_blank"
+              btnText="En savoir plus sur Cars4Mars"
+            />
           </Col>
         </Row>
       </Container>

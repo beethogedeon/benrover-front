@@ -94,9 +94,9 @@ export default function Home() {
     <>
       {/* Start Hero Section */}
       <Hero
-        title="Rover : Ensemble vers Mars."
-        subtitle="THIS PROJECT HAS BEEN BUILT BY A TEAM OF YOUNG BENIN ENGINEERS AND STUDENTS AS PART OF AFRICAN ROVER CHALLENGE."
-        btnText="Un <mark>rover</mark> conçu et <mark>fabriqué au Bénin</mark> pour les missions sur <mark>Mars</mark>."
+        title="Rover :"
+        subtitle="Ensemble vers Mars."
+        btnText="Une équipe de <mark>Jeunes Béninois(es)</mark> passionnée, engagée à concevoir et fabriquer un rover <mark>Made in Benin</mark> pour les missions sur <mark>Mars</mark>."
         btnLink="https://github.com/benrover-24"
         scrollDownId="#gallery"
         socialLinksHeading="Suivez-nous"
@@ -110,8 +110,7 @@ export default function Home() {
         <FunFact
           variant="cs-type1"
           title="A Propos du projet"
-          subtitle="<b>BenRover-24</b> est un robot mobile d'exploration (<i>astromobile ou rover</i>) conçu pour explorer la surface de la planète Mars. Ce projet est conçu par une équipe de jeunes ingénieurs et étudiants passionnés d'espace et de technologie dans le cadre de l'African Rover Challenge.<br/><br/>
-Le challenge consiste à concevoir et à construire un prototype de rover martien. Il s'agit d'un petit robot mobile, contrôlé sans fil et doté d'une source d'énergie indépendante."
+          subtitle="Nous participons à travers TEKBOT-ROBOTICS, leader en robotique au Bénin, à la première compétition africaine de rover 'Cars for Mars', en l’utilisant comme levier pour développer des compétences techniques clés, innover, et promouvoir les STIM au Bénin."
           data={funfaceData}
         />
       </div>
@@ -156,6 +155,18 @@ Le challenge consiste à concevoir et à construire un prototype de rover martie
         </Div>
       </Div>
 
+      <Div className="container">
+        <Div className="row">
+          <Div className="col-lg-6">
+            <img src="/images/benin-revele.png" alt="" height={'70px!important'}/>
+          </Div>
+          <Div className="col-lg-6 ">
+            <h2 className="cs-hero_title align-middle">
+            From Benin to the World
+            </h2>
+          </Div>
+        </Div>
+      </Div>
       <Spacing lg="150" md="50" />
       <Div>
         <Div className="container" id="gallery">
@@ -182,7 +193,7 @@ Le challenge consiste à concevoir et à construire un prototype de rover martie
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
-          videoSrc="https://www.youtube.com/watch?v=yqXpuzi4ek0"
+          videoSrc="https://player.vimeo.com/video/997145295?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
           bgUrl="/images/video_bg.png"
         />
       </Div>
