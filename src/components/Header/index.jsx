@@ -41,7 +41,7 @@ export default function Header({ variant }) {
             <Div className="cs-main_header_in">
               <Div className="cs-main_header_left">
                 <NavLink className="cs-site_branding" to="/">
-                  <img src="/images/logo.png" alt="BenRover - Tekbot Robotics" />
+                  <img src="/images/logo.png" alt="BenRover - Tekbot Robotics" width="100" height="100"/>
                 </NavLink>
               </Div>
               <Div className="cs-main_header_right">
