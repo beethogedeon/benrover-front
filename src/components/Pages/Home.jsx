@@ -94,7 +94,7 @@ export default function Home() {
     <>
       {/* Start Hero Section */}
       <Hero
-        title="BenRover-24,"
+        title="Rover : Ensemble vers Mars."
         subtitle="THIS PROJECT HAS BEEN BUILT BY A TEAM OF YOUNG BENIN ENGINEERS AND STUDENTS AS PART OF AFRICAN ROVER CHALLENGE."
         btnText="Un <mark>rover</mark> conçu et <mark>fabriqué au Bénin</mark> pour les missions sur <mark>Mars</mark>."
         btnLink="https://github.com/benrover-24"
@@ -119,7 +119,7 @@ Le challenge consiste à concevoir et à construire un prototype de rover martie
 
       
 
-      {/* Start Portfolio Section */}
+      {/* Start Portfolio Section
       <Spacing lg="150" md="50" />
       <Div>
         <Div className="container" id="specs">
@@ -134,22 +134,7 @@ Le challenge consiste à concevoir et à construire un prototype de rover martie
       </Div>
       {/* End Portfolio Section */}
 
-      <Spacing lg="150" md="50" />
-      <Div>
-        <Div className="container" id="gallery">
-          <SectionHeading
-            title="Découvrez notre travail"
-            subtitle="LA GALERIE"
-            variant="cs-style1 text-center"
-          />
-          <Spacing lg="90" md="45" />
-        </Div>
-        <PortfolioSlider data={portfolioData} />
-      </Div>
-      {/* End Portfolio Section */}
-
-      {/* Start Awards Section */}
-      <Spacing lg="150" md="80" />
+<Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_2" id="goals">
         <Div className="cs-shape_2">
           <Div />
@@ -170,6 +155,23 @@ Le challenge consiste à concevoir et à construire un prototype de rover martie
           </Div>
         </Div>
       </Div>
+
+      <Spacing lg="150" md="50" />
+      <Div>
+        <Div className="container" id="gallery">
+          <SectionHeading
+            title="Découvrez notre travail"
+            subtitle="LA GALERIE"
+            variant="cs-style1 text-center"
+          />
+          <Spacing lg="90" md="45" />
+        </Div>
+        <PortfolioSlider data={portfolioData} />
+      </Div>
+      {/* End Portfolio Section */}
+
+      {/* Start Awards Section */}
+      
       {/* End Awards Section */}
 
       {/* Start Video Block Section */}

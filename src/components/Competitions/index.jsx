@@ -1,23 +1,52 @@
 import React from "react";
 import { Container, Row, Col, Card, Button, Accordion } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
+import Spacing from "../Spacing";
+//import { Calendar, Clock } from 'lucide-react';
+
+
+/*const TimelineEvent = ({ date, event }) => (
+  <div className="timeline-event d-flex">
+    <div className="timeline-icon bg-primary text-white rounded-circle p-2 mr-3">
+      <Calendar size={24} />
+    </div>
+    <div className="timeline-content">
+      <h5 className="mb-0">{event}</h5>
+      <p className="text-muted mb-0">
+        <Clock size={16} className="mr-1" />
+        {date}
+      </p>
+    </div>
+  </div>
+);*/
 
 const Competitions = () => {
+
+  const timelineEvents = [
+    { date: "15 mars 2024", event: "Inscription des équipes" },
+    { date: "12 mai 2024", event: "Rapport de stratégie de projet" },
+    { date: "11 août 2024", event: "Rapport de conception final" },
+    { date: "11 août 2024", event: "Vidéo" },
+    { date: "14 septembre 2024", event: "Finale de l'étape de lancement" },
+    { date: "15 septembre 2024", event: "Qualification pour l'étape Mars" },
+    { date: "26 octobre 2024", event: "Étape Mars" },
+  ];
+  
     return (
         <Container className="my-5">
         <Row className="mb-4">
           <Col>
-            <h2 className="text-center mb-4">Qu'est-ce que le Défi African Rover Challenge ?</h2>
+            <h2 className="text-center mb-4">African Rover Challenge : Qu'est-ce que c'est ?</h2>
             <p>
-              Le Défi African Rover Challenge est une compétition passionnante qui invite les étudiants à concevoir et construire un prototype de rover martien. Ce défi vise à stimuler l'innovation, la créativité et l'intérêt pour les technologies spatiales parmi les jeunes africains. Bien que le prototype ne soit pas destiné à fonctionner dans les conditions réelles de l'espace ou de Mars, il doit être un petit robot mobile, contrôlé sans fil et doté d'une source d'alimentation indépendante.
+              Il s'agit d'une compétition passionnante qui invite les étudiants à concevoir et construire un prototype de rover martien. Ce défi vise à stimuler l'innovation, la créativité et l'intérêt pour les technologies spatiales parmi les jeunes africains. Bien que le prototype ne soit pas destiné à fonctionner dans les conditions réelles de l'espace ou de Mars, il doit être un petit robot mobile, contrôlé sans fil et doté d'une source d'alimentation indépendante.
             </p>
           </Col>
         </Row>
 
         <Row className="mb-4">
           <Col md={6}>
-            <Card className="bg-dark text-light">
-              <Card.Header as="h3">Qui peut participer ?</Card.Header>
+            <Card className="bg-dark text-light" style={{height: '600px'}}>
+              <Card.Header as="h3" className="text-center">Qui peut participer ?</Card.Header>
               <Card.Body>
                 <ul>
                   <li>Étudiants activement inscrits dans des lycées, collèges ou universités pendant toute la durée de la compétition</li>
@@ -29,8 +58,8 @@ const Competitions = () => {
             </Card>
           </Col>
           <Col md={6}>
-            <Card className="bg-dark text-light">
-              <Card.Header as="h3">Objectifs du défi</Card.Header>
+            <Card className="bg-dark text-light" style={{height: '600px'}}>
+              <Card.Header as="h3" className="text-center">Quels sont les objectifs ?</Card.Header>
               <Card.Body>
                 <ul>
                   <li>Concevoir un robot mobile contrôlé sans fil</li>
@@ -44,11 +73,12 @@ const Competitions = () => {
             </Card>
           </Col>
         </Row>
-
+        <Spacing lg="90" md="45" />
         <Row className="mb-4">
           <Col>
-            <h3 className="text-center mb-3">Étapes de la compétition</h3>
-            <Accordion className="bg-dark text-light">
+            <h2 className="text-center mb-3">Étapes de la compétition</h2>
+            <Spacing lg="30" md="15" />
+            <Accordion className="text-light">
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Étape de Lancement</Accordion.Header>
                 <Accordion.Body>
@@ -78,14 +108,17 @@ const Competitions = () => {
           </Col>
         </Row>
 
+        <Spacing lg="90" md="45" />
+
         <Row className="mb-4">
           <Col>
-            <h3 className="text-center mb-3">Calendrier 2024</h3>
-            <table className="table table-striped bg-dark text-light">
+            <h2 className="text-center mb-3">Calendrier 2024</h2>
+            <Spacing lg="30" md="15" />
+            <table className="table table-striped table-bordered table-sm table-dark text-light">
               <thead>
                 <tr>
-                  <th>Événement</th>
-                  <th>Date limite</th>
+                  <th className="fw-bold">Événement</th>
+                  <th className="fw-bold">Date limite</th>
                 </tr>
               </thead>
               <tbody>
@@ -121,11 +154,12 @@ const Competitions = () => {
             </table>
           </Col>
         </Row>
-
+        <Spacing lg="90" md="45" />
         <Row className="mb-4">
           <Col>
-            <h3 className="text-center mb-3">Équipe BenRover</h3>
-            <Card className="bg-dark text-light">
+            <h2 className="text-center mb-3">Équipe BenRover</h2>
+            <Spacing lg="30" md="15" />
+            <Card className="bg-dark text-light text-justify">
               <Card.Body>
                 <p>
                   Notre équipe, BenRover, est un collectif diversifié d'étudiants de la République du Bénin. Nous sommes unis par un objectif commun : nous développer en tant qu'ingénieurs et créateurs. Notre équipe est structurée en cinq groupes clés :
@@ -150,7 +184,7 @@ const Competitions = () => {
 
         <Row className="mb-4">
           <Col>
-            <h3 className="text-center mb-3">Conception initiale du rover BenRover</h3>
+            <h2 className="text-center mb-3">Conception initiale du rover BenRover</h2>
             <Card className="bg-dark text-light">
               <Card.Body>
                 <h4>Conception mécanique :</h4>

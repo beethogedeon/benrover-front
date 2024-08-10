@@ -9,7 +9,7 @@ import GalleryStyle2 from '../Gallery/GalleryStyle2';
 import Gallery from '../Gallery';
 
 export default function GalleryPage() {
-    pageTitle('Notre équipe');
+    pageTitle('La Galerie');
   
     useEffect(() => {
       window.scrollTo(0, 0);
@@ -19,7 +19,7 @@ export default function GalleryPage() {
       <>
         <PageHeading
           title="La galerie"
-          bgSrc="images/team-hero-bg.webp"
+          bgSrc="images/cta_bg.jpeg"
           pageLinkText="Galerie"
         />
         <Spacing lg="145" md="80" />

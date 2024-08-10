@@ -8,7 +8,7 @@
   border-color: var(--accent);
 }
 
-.btn-outline-primary:hover {
+.btn-outline-primary:hover,  .btn-primary, .btn-primary:hover{
   color: #fff;
   background-color: var(--accent);
   border-color: var(--accent);

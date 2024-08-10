@@ -3,7 +3,9 @@ import { Link, NavLink } from 'react-router-dom';
 import SocialWidget from '../Widget/SocialWidget';
 import './header.scss';
 import ContactInfoWidget from '../Widget/ContactInfoWidget';
+import SponsorButton from '../SponsorButton';
 import Div from '../Div';
+import { Image } from 'react-bootstrap';
 
 const navItems = [
   { to: '/', label: 'Accueil' },
@@ -12,7 +14,6 @@ const navItems = [
   { to: '/rovers', label: 'Rovers' },
   { to: '/partners', label: 'Partenaires' },
   { to: '/gallery', label: 'Galerie' },
-  { to: '/donation', label: 'Sponsorisez-nous' },
 ];
 
 export default function Header({ variant }) {
@@ -41,10 +42,17 @@ export default function Header({ variant }) {
             <Div className="cs-main_header_in">
               <Div className="cs-main_header_left">
                 <NavLink className="cs-site_branding" to="/">
-                  <img src="/images/logo.png" alt="BenRover - Tekbot Robotics" width="120" height="100"/>
+
+                <Image 
+                src="/images/logo.png"
+                alt="Logo"
+                height="100%"
+                fluid
+                />
+                  {/*<img src="/images/logo.png" alt="BenRover - Tekbot Robotics" style={{height: '100%', objectFit: 'cover'}}/>*/}
                 </NavLink>
               </Div>
-              <Div className="cs-main_header_right">
+              <Div className="cs-main_header_center">
                 <Div className="cs-nav cs-primary_font cs-medium">
                   <ul
                     className="cs-nav_list"
@@ -56,7 +64,7 @@ export default function Header({ variant }) {
           <NavLink
         to={item.to}
         onClick={() => setMobileToggle(false)}
-        className='active'
+        className='active text-capitalize'
         >
           {item.label}
         </NavLink>
@@ -75,9 +83,9 @@ export default function Header({ variant }) {
                   </span>
                 </Div>
               </Div>
-              {/*<Div className="cs-main_header_right">
+              <Div className="cs-main_header_right">
                 <Div className="cs-toolbox">
-                  <span
+                  {/*<span
                     className="cs-icon_btn"
                     onClick={() => setSideHeaderToggle(!sideHeaderToggle)}
                   >
@@ -87,9 +95,11 @@ export default function Header({ variant }) {
                       <span />
                       <span />
                     </span>
-                  </span>
+                  </span>*/}
+                  <SponsorButton />
                 </Div>
-              </Div>*/}
+                
+              </Div>
             </Div>
           </Div>
         </Div>

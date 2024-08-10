@@ -1,0 +1,75 @@
+@keyframes pulseanim {
+  0% {
+    box-shadow: 0 0 0 0 rgba(198, 105, 72, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(198, 105, 72, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(198, 105, 72, 0);
+  }
+};
+
+.buttonWrapper {
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .glowButton {
+    position: relative;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    background: var(--accent);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    animation: pulseanim 2s infinite;
+  }
+  
+  .glowButton::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: var(--accent);
+    transform: scale(0);
+    transition: transform 0.6s ease-out;
+  }
+  
+  .glowButton:hover::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .glowButton:hover {
+    animation-play-state: paused;
+    transform: scale(1.05);
+    /*transform: translateY(-3px);*/
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .buttonContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+  
+  .glowButton:hover .icon {
+    animation: heartbeat 0.8s infinite;
+  }

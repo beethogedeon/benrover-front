@@ -60,8 +60,8 @@ const teamData = [
     memberName: 'Sergino  GOUNOUKPEROU',
     memberDesignation: 'Software Engineer',
     memberSocial: {
-      linkedin: 'https://linkedin.com/in/gedeongbedonou',
-      github: 'https://github.com/beethogedeon',
+      linkedin: 'https://www.linkedin.com/in/gounoukperou-sergino-bradford-7513651a3/',
+      github: 'https://github.com/SerginoBradford',
     },
   },
   {

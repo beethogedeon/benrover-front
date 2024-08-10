@@ -302,7 +302,7 @@
 .cs-site_branding {
   display: inline-block;
   img {
-    max-height: 45px;
+    max-height: 100px;
   }
 }
 
@@ -318,8 +318,8 @@
 
   .cs-main_header_center,
   .cs-top_header_center {
-    position: relative;
-    right: 50%;
+    position: absolute;
+    left: 38%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
@@ -335,6 +335,7 @@
     }
     .cs-main_header_left {
       height: 100%;
+      width: 150px;
       display: flex;
       justify-content: center;
       align-items: center;

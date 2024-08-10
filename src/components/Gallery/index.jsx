@@ -5,12 +5,12 @@ import React from 'react';
 // <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 const galleryItems = [
-  { id: 1, src: '/images/Gallery/1.webp', alt: 'Image 1', title: 'Beautiful Landscape', description: 'A serene view of nature at its finest' },
-  { id: 2, src: '/images/Gallery/2.webp', alt: 'Image 2', title: 'Urban Architecture' },
-  { id: 3, src: '/images/Gallery/3.webp', alt: 'Image 3', title: 'Cute Animal', description: 'An adorable creature from the wild' },
-  { id: 4, src: '/images/Gallery/4.webp', alt: 'Image 4', title: 'Abstract Art' },
-  { id: 5, src: '/images/Gallery/5.webp', alt: 'Image 5', title: 'Interesting Object', description: 'A curious item with a story to tell' },
-  { id: 6, src: '/images/Gallery/6.webp', alt: 'Image 6', title: 'Night Sky' },
+  { id: 1, src: '/images/Gallery/1.webp', alt: 'Image 1', title: 'Conception 3D'},
+  { id: 2, src: '/images/Gallery/2.webp', alt: 'Image 2', title: 'Conception 3D' },
+  { id: 3, src: '/images/Gallery/3.webp', alt: 'Image 3', title: 'Conception 3D'},
+  { id: 4, src: '/images/Gallery/4.webp', alt: 'Image 4', title: 'Moteur' },
+  { id: 5, src: '/images/Gallery/5.webp', alt: 'Image 5', title: 'Impression 3D' },
+  { id: 6, src: '/images/Gallery/6.webp', alt: 'Image 6', title: 'Electronique' },
 ];
 
 const GalleryItem = ({ src, alt, title, description }) => (
@@ -20,7 +20,7 @@ const GalleryItem = ({ src, alt, title, description }) => (
       <div className="card-body d-flex flex-column">
         <h5 className="card-title text-light">{title}</h5>
         {description && <p className="card-text flex-grow-1 text-light">{description}</p>}
-        <button className="btn btn-outline-primary mt-auto">View Details</button>
+        <button className="btn btn-outline-primary mt-auto">En savoir plus</button>
       </div>
     </div>
   </div>
