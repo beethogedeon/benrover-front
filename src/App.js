@@ -4,6 +4,8 @@ import DonationPage from './components/Pages/DonationPage';
 import ErrorPage from './components/Pages/ErrorPage';
 import Home from './components/Pages/Home';
 import TeamPage from './components/Pages/TeamPage';
+import GalleryPage from './components/Pages/GalleryPage';
+import CompetitionsPage from './components/Pages/CompetitionsPage';
 import TeamDetails from './components/Pages/TeamDetails';
 import Layout from './components/Layout';
 import FaqPage from './components/Pages/FaqPage';
@@ -17,6 +19,8 @@ function App() {
           <Route path="about" element={<AboutPage />} />
           <Route path="donation" element={<DonationPage />} />
           <Route path="team" element={<TeamPage />} />
+          <Route path="gallery" element={<GalleryPage />} />
+          <Route path="competitions" element={<CompetitionsPage />} />
           <Route path="team/:teamDetails" element={<TeamDetails />} />
           <Route path="faq" element={<FaqPage />} />
         </Route>

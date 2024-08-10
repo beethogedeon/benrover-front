@@ -4,6 +4,7 @@ import './cta.scss'
 import Button from '../Button';
 import Div from '../Div';
 import Spacing from '../Spacing';
+import { NavLink } from 'react-router-dom';
 
 export default function Cta({title, btnText, btnLink, bgSrc, variant}) {
   return (
@@ -16,10 +17,13 @@ export default function Cta({title, btnText, btnLink, bgSrc, variant}) {
         {btnText && (
           <>
             <Spacing lg='70' md='30' />
-            <Button 
+            {/*<Button 
               btnLink={btnLink}
               btnText={btnText}
-            />
+            />*/}
+            <NavLink to={btnLink} className={variant ? `cs-text_btn ${variant}` : 'cs-text_btn'}>
+              {btnText}
+            </NavLink>
           </>
         )}
       </Div>

@@ -2,24 +2,16 @@ import React from 'react';
 import ModalImage from 'react-modal-image';
 const galleryData = [
   {
-    src: 'images/gallery_1.jpeg',
-    srcLg: 'images/gallery_1.jpeg',
+    src: '/images/Gallery/1.webp',
+    srcLg: '/images/Gallery/1.webp',
   },
   {
-    src: 'images/gallery_2.jpeg',
-    srcLg: 'images/gallery_2.jpeg',
+    src: '/images/Gallery/2.webp',
+    srcLg: '/images/Gallery/2.webp',
   },
   {
-    src: 'images/gallery_3.jpeg',
-    srcLg: 'images/gallery_3.jpeg',
-  },
-  {
-    src: 'images/gallery_4.jpeg',
-    srcLg: 'images/gallery_4.jpeg',
-  },
-  {
-    src: 'images/gallery_5.jpeg',
-    srcLg: 'images/gallery_5.jpeg',
+    src: '/images/Gallery/3.webp',
+    srcLg: '/images/Gallery/3.webp',
   },
 ];
 

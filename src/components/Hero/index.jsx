@@ -30,7 +30,7 @@ export default function Hero({
           <Div>
             <Div>
               {/*<Button btnLink={btnLink} btnText={btnText} />*/}
-              <span className="fs-2 tracking-tighter">{parse(btnText)}</span>
+              <span className="fs-2 tracking-tighter lh-base">{parse(btnText)}</span>
             </Div>
           </Div>
         </Div>

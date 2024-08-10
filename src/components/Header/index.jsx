@@ -40,11 +40,11 @@ export default function Header({ variant }) {
           <Div className="container">
             <Div className="cs-main_header_in">
               <Div className="cs-main_header_left">
-                <Link className="cs-site_branding" to="/">
+                <NavLink className="cs-site_branding" to="/">
                   <img src="/images/logo.png" alt="BenRover - Tekbot Robotics" />
-                </Link>
+                </NavLink>
               </Div>
-              <Div className="cs-main_header_center">
+              <Div className="cs-main_header_right">
                 <Div className="cs-nav cs-primary_font cs-medium">
                   <ul
                     className="cs-nav_list"
@@ -75,7 +75,7 @@ export default function Header({ variant }) {
                   </span>
                 </Div>
               </Div>
-              <Div className="cs-main_header_right">
+              {/*<Div className="cs-main_header_right">
                 <Div className="cs-toolbox">
                   <span
                     className="cs-icon_btn"
@@ -89,13 +89,13 @@ export default function Header({ variant }) {
                     </span>
                   </span>
                 </Div>
-              </Div>
+              </Div>*/}
             </Div>
           </Div>
         </Div>
       </header>
 
-      <Div
+      {/*<Div
         className={
           sideHeaderToggle ? 'cs-side_header active' : 'cs-side_header'
         }
@@ -108,7 +108,7 @@ export default function Header({ variant }) {
           className="cs-side_header_overlay"
           onClick={() => setSideHeaderToggle(!sideHeaderToggle)}
         />
-        <Div className="cs-side_header_in">
+        {/*<Div className="cs-side_header_in">
           <Div className="cs-side_header_box">
             <ContactInfoWidget title="Contactez-nous" withIcon />
           </Div>
@@ -116,7 +116,7 @@ export default function Header({ variant }) {
             <SocialWidget />
           </Div>
         </Div>
-      </Div>
+      </Div>*/}
     </>
   );
 }

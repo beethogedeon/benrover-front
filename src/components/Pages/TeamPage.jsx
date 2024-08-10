@@ -100,7 +100,7 @@ const teamData = [
 ];
 
 export default function TeamPage() {
-  pageTitle('Team');
+  pageTitle('Notre équipe');
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -136,29 +136,31 @@ export default function TeamPage() {
         </Div>
         <Div className="container">
           <Div className="row">
-            <Div className="col-lg-6">
-              <img src="images/IT.png" alt="IT" />
+            <Div className="col-lg-6 ">
+              <img className='rounded-4 shadow' src="images/IT.png" alt="IT"/>
             </Div>
             <Div className="col-lg-6">
-              <h2>Information Technology</h2>
+              <h2>Technologie de l'information</h2>
               <p className='mb-4'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui omnis, odio culpa cumque quae, obcaecati ducimus deleniti cupiditate sapiente ullam sit ab magnam nobis. Illum esse ipsum consequuntur officiis facilis.
               </p>
             </Div>
             <Spacing lg="90" md="45" />
-            
+            <Div className="col-lg-6 d-block d-lg-none d-xl-none">
+              <img className='rounded-4 shadow' src="images/Mechanical.png" alt="Mechanical" />
+            </Div>
             <Div className="col-lg-6">
               <h2>Mechanical</h2>
               <p className='mb-4'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui omnis, odio culpa cumque quae, obcaecati ducimus deleniti cupiditate sapiente ullam sit ab magnam nobis. Illum esse ipsum consequuntur officiis facilis.
               </p>
             </Div>
-            <Div className="col-lg-6">
-              <img src="images/Mechanical.png" alt="IT" />
+            <Div className="col-lg-6 d-none d-lg-block d-xl-block">
+              <img className='rounded-4 shadow' src="images/Mechanical.png" alt="Mechanical" />
             </Div>
             <Spacing lg="90" md="45" />
             <Div className="col-lg-6">
-              <img src="images/Electronical.png" alt="Electronical" />
+              <img className='rounded-4 shadow' src="images/Electronical.png" alt="Electronical" />
             </Div>
             <Div className="col-lg-6">
               <h2>Electronical</h2>
@@ -167,26 +169,29 @@ export default function TeamPage() {
               </p>
             </Div>
             <Spacing lg="90" md="45" />
+            <Div className="col-lg-6 d-block d-lg-none d-xl-none">
+              <img className='rounded-4 shadow' src="images/Project Management.png" alt="Project Management" />
+            </Div>
             <Div className="col-lg-6">
               <h2>Project Management</h2>
               <p className='mb-4'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui omnis, odio culpa cumque quae, obcaecati ducimus deleniti cupiditate sapiente ullam sit ab magnam nobis. Illum esse ipsum consequuntur officiis facilis.
               </p>
             </Div>
-            <Div className="col-lg-6">
-              <img src="images/Project Management.png" alt="Project Management" />
+            <Div className="col-lg-6 d-none d-lg-block d-xl-block">
+              <img className='rounded-4 shadow' src="images/Project Management.png" alt="Project Management" />
             </Div>
           </Div>
         </Div>
         <Spacing lg="90" md="45" />
-        <Div className="container">
-          <Cta
-            title="Let’s disscuse make <br />something <i>cool</i> together"
-            btnText="Apply For Meeting"
-            btnLink="/contact"
-            bgSrc="/images/cta_bg.jpeg"
-          />
-        </Div>
+        <Div className="container" id="sponsor">
+        <Cta
+          title="Vous pouvez soutenir<br /> notre projet en faisant un simple geste !"
+          btnText="Faire un don"
+          btnLink="/donation"
+          bgSrc="/images/cta_bg.png"
+        />
+      </Div>
       </Div>
     </>
   );
