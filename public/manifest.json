@@ -1,6 +1,6 @@
 {
   "short_name": "BenRover",
-  "name": "Rover for mars missions",
+  "name": "Rover build by benineses for mars missions",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,5 +21,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#ffffff",
-  "background_color": "#181818"
+  "background_color": "#c66948"
 }
