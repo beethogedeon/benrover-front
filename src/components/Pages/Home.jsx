@@ -3,19 +3,21 @@ import Card from '../Card';
 import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
-import LogoList from '../LogoList';
 import MovingText from '../MovingText';
 import VideoModal from '../VideoModal';
-import TimelineSlider from '../Slider/TimelineSlider';
 import { pageTitle } from '../../helper';
-import { HashLink as Link } from 'react-router-hash-link';
+//import { HashLink as Link } from 'react-router-hash-link';
 
 const Hero = React.lazy(() => import('../Hero'));
 const FunFact = React.lazy(() => import('../FunFact'));
-const RoverFeatSpecs = React.lazy(() => import('../RoverSpecs'));
+//const RoverFeatSpecs = React.lazy(() => import('../RoverSpecs'));
 const Cta = React.lazy(() => import('../Cta'));
 const PortfolioSlider = React.lazy(() => import('../Slider/PortfolioSlider'));
 const TeamSlider = React.lazy(() => import('../Slider/TeamSlider'));
+const LogoList = React.lazy(() => import('../LogoList'));
+const Goals = React.lazy(() => import('../Slider/Goals'));
+const BeninRevele = React.lazy(() => import('../BeninRevele'));
+
 // Hero Social Links
 const heroSocialLinks = [
   {
@@ -135,9 +137,6 @@ export default function Home() {
 
 <Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_2" id="goals">
-        <Div className="cs-shape_2">
-          <Div />
-        </Div>
         <Div className="container">
           <Div className="row">
             <Div className="col-xl-4">
@@ -149,13 +148,16 @@ export default function Home() {
               <Spacing lg="90" md="45" />
             </Div>
             <Div className="col-xl-7 offset-xl-1">
-              <TimelineSlider />
+              <Div className="row">
+                <Goals />
+              </Div>
             </Div>
+            
           </Div>
         </Div>
       </Div>
 
-      <Div className="container">
+      {/*<Div className="container">
         <Div className="row">
           <Div className="col-lg-6">
             <img src="/images/benin-revele.png" alt="" height={'70px!important'}/>
@@ -166,7 +168,9 @@ export default function Home() {
             </h2>
           </Div>
         </Div>
-      </Div>
+      </Div>*/}
+      <Spacing lg="150" md="80" />
+      <BeninRevele />
       <Spacing lg="150" md="50" />
       <Div>
         <Div className="container" id="gallery">

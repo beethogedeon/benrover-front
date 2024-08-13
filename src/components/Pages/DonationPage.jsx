@@ -1,4 +1,4 @@
-import { Icon } from '@iconify/react';
+//import { Icon } from '@iconify/react';
 import React, { useState, useEffect } from 'react';
 import { pageTitle } from '../../helper';
 import Div from '../Div';
@@ -13,9 +13,24 @@ const currencySigns = {
 };
 
 export default function DonationPage() {
-  pageTitle('Support Us');
+  pageTitle('Soutenir le projet');
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  //const [scriptLoaded, setScriptLoaded] = useState(false);
+
+  useEffect(() => {
+    const loadScript = async () => {
+      try {
+        await import('https://cdn.fedapay.com/checkout.js?v=1.1.7');
+        //setScriptLoaded(true);
+      } catch (error) {
+        console.error('Failed to load script:', error);
+      }
+    };
+
+    loadScript();
   }, []);
 
   const [locale, setLocale] = useState('');

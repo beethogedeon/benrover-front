@@ -1,0 +1,41 @@
+
+.benin-revele-container {
+  background-color: #161616;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  padding: 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.bird-logo {
+  width: 100px; /* Adjust as needed */
+  height: auto;
+  margin-right: 1rem;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.slogan-text {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.outlined {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+}

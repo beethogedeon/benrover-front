@@ -8,7 +8,7 @@ const teamData = [
     memberImage: '/images/Teams/Mohamed.png',
     memberImage2: '/images/Teams2/Mohamed.png',
     memberName: 'Mohamed SALIFOU',
-    memberDesignation: 'Product Designer',
+    memberDesignation: 'Product Manager',
     memberSocial: {
       linkedin: 'https://linkedin.com/in/mohamed-salifou/65ab18194',
       github: 'https://github.com/moh-maker229',
@@ -31,7 +31,7 @@ const teamData = [
     memberDesignation: 'Electronic Engineer',
     memberSocial: {
       linkedin: 'https://linkedin.com/in/yay%C3%A9-haby-sow-b61b2b236',
-      github: '/',
+      //github: '/',
     },
   },
   {
@@ -48,7 +48,7 @@ const teamData = [
     memberImage: '/images/Teams/Elfried.png',
     memberImage2: '/images/Teams2/Elfried.png',
     memberName: 'Elfried KINZOUN',
-    memberDesignation: 'Étudiant en IA',
+    memberDesignation: 'Software Engineer',
     memberSocial: {
       linkedin: 'https://www.linkedin.com/in/elfried-kinzoun-858063278',
       github: 'https://github.com/elfried96',
@@ -71,7 +71,7 @@ const teamData = [
     memberDesignation: 'Mechanical Engineering Student',
     memberSocial: {
       linkedin: 'https://linkedin.com/in/edwige-kpadonou-b2782a320',
-      github: 'https://github.com/',
+      github: 'https://github.com/Edwigekp',
     },
   },
   
@@ -114,7 +114,7 @@ const teamData = [
     memberDesignation: 'Mechanical Engineering Student',
     memberSocial: {
       linkedin: 'https://www.linkedin.com/in/asmaa-kora-zaki-151b3a22a/',
-      github: 'https://github.com/',
+      //github: 'https://github.com/',
     },
   },
   {
@@ -133,7 +133,7 @@ const teamData = [
     memberName: 'Donald OBA',
     memberDesignation: 'Robotics Engineering Student',
     memberSocial: {
-      linkedin: '#',
+      linkedin: 'https://www.linkedin.com/in/donald-oba-bb6a91284',
       github: 'https://github.com/donaldoba',
     },
   },
