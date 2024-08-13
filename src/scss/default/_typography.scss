@@ -1,5 +1,7 @@
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://db.onlinewebfonts.com/c/493ef3e030e983a1d6377cacd82a1520?family=Kokoschka');
+
 body,
 html {
   color: $secondary;
@@ -23,7 +25,7 @@ h6 {
   margin: 0 0 20px 0;
   font-weight: 600;
   line-height: 1.3em;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Kokoschka', sans-serif;
 }
 
 .cs-primary_font {
