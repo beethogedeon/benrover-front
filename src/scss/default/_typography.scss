@@ -25,7 +25,7 @@ h6 {
   margin: 0 0 20px 0;
   font-weight: 600;
   line-height: 1.3em;
-  font-family: 'Kokoschka', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .cs-primary_font {
@@ -34,6 +34,11 @@ h6 {
 
 .cs-secondary_font {
   font-family: 'Inter', sans-serif;
+}
+
+.cs-section_title {
+  font-family: 'Kokoschka', sans-serif;
+  letter-spacing: 0.1em;
 }
 
 h1 {
