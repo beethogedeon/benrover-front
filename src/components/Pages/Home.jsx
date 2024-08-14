@@ -192,7 +192,7 @@ export default function Home() {
       {/* Start Video Block Section */}
       <Spacing lg="130" md="70" />
       <Div className="container">
-        <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
+        <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4 cs-section_title">
         Nous y travaillons...
         </h2>
         <Spacing lg="70" md="70" />

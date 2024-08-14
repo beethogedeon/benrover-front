@@ -31,7 +31,7 @@ const teamData = [
     memberDesignation: 'Electronic Engineer',
     memberSocial: {
       linkedin: 'https://linkedin.com/in/yay%C3%A9-haby-sow-b61b2b236',
-      //github: '/',
+      github: 'https://github.com/Haby22',
     },
   },
   {
@@ -144,7 +144,7 @@ const teamData = [
     memberDesignation: 'Software Engineering Student',
     memberSocial: {
       linkedin: 'https://www.linkedin.com/in/hortence-azandossessi/',
-      github: 'https://github.com/',
+      github: 'https://github.com/Hortence12',
     },
   },
   {
