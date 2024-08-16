@@ -1,18 +1,21 @@
+import React, {lazy, Suspense} from 'react';
 import { Route, Routes } from 'react-router-dom';
-import AboutPage from './components/Pages/AboutPage';
-import DonationPage from './components/Pages/DonationPage';
-import ErrorPage from './components/Pages/ErrorPage';
-import Home from './components/Pages/Home';
-import TeamPage from './components/Pages/TeamPage';
-import GalleryPage from './components/Pages/GalleryPage';
-import CompetitionsPage from './components/Pages/CompetitionsPage';
-///import TeamDetails from './components/Pages/TeamDetails';
+import Loading from './components/Loading';
 import Layout from './components/Layout';
-import FaqPage from './components/Pages/FaqPage';
+
+const Home = lazy(() => import('./components/Pages/Home'));
+const AboutPage = lazy(() => import('./components/Pages/AboutPage'));
+const DonationPage = lazy(() => import('./components/Pages/DonationPage'));
+const ErrorPage = lazy(() => import('./components/Pages/ErrorPage'));
+const TeamPage = lazy(() => import('./components/Pages/TeamPage'));
+const GalleryPage = lazy(() => import('./components/Pages/GalleryPage'));
+const CompetitionsPage = lazy(() => import('./components/Pages/CompetitionsPage'));
+const FaqPage = lazy(() => import('./components/Pages/FaqPage'));
 
 function App() {
   return (
     <>
+    <Suspense fallback={<Loading />}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -21,13 +24,35 @@ function App() {
           <Route path="team" element={<TeamPage />} />
           <Route path="gallery" element={<GalleryPage />} />
           <Route path="competitions" element={<CompetitionsPage />} />
-          {/*<Route path="team/:teamDetails" element={<TeamDetails />} />*/}
           <Route path="faq" element={<FaqPage />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+    </Suspense>
+      
     </>
   );
 }
 
 export default App;
+/*
+function App() {
+  return (
+      <Layout>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/donation" element={<DonationPage />} />
+            <Route path="/team" element={<TeamPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/competitions" element={<CompetitionsPage />} />
+            <Route path="/faq" element={<FaqPage />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </Suspense>
+      </Layout>
+  );
+}
+
+export default App;*/

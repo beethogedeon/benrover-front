@@ -12,7 +12,7 @@ export default function Layout({ headerVariant }) {
     <>
       <Header variant={headerVariant} />
       <Outlet />
-      <CustomCursor />
+      {/*<CustomCursor />*/}
       <Footer />
     </>
   );

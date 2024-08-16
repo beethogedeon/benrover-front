@@ -46,49 +46,69 @@ export default function TeamPage() {
         <Div className="container">
           <Div className="row">
             <Div className="col-lg-6 ">
-              <img className='rounded-4 shadow' src="images/IT.png" alt="IT"/>
+              <img className='rounded-4 shadow' src="images/IT.webp" alt="IT Team"/>
             </Div>
             <Div className="col-lg-6">
-              <h2>Technologie de l'information</h2>
-              <p className='mb-4'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui omnis, odio culpa cumque quae, obcaecati ducimus deleniti cupiditate sapiente ullam sit ab magnam nobis. Illum esse ipsum consequuntur officiis facilis.
+              <h2>IT 💻</h2>
+              <p className='mb-4 text-justify'>L'équipe IT est chargée du développement logiciel et du contrôle du rover. Leurs objectifs principaux sont : <br /> <br />
+                <ul>
+                    <li>Implémenter le système de contrôle du rover en utilisant ROS (Robot Operating System)</li>
+                    <li>Développer l'interface utilisateur pour le contrôle à distance</li>
+                    <li>Assurer la communication sans fil entre le rover et la station de contrôle</li>
+                    <li>Intégrer et traiter les données des capteurs pour la navigation et la prise de décision</li>
+                </ul>
               </p>
             </Div>
             <Spacing lg="90" md="45" />
             <Div className="col-lg-6 d-block d-lg-none d-xl-none">
-              <img className='rounded-4 shadow' src="images/Mechanical.png" alt="Mechanical" />
+              <img className='rounded-4 shadow' src="images/Mechanical.webp" alt="Mechanical Team" />
             </Div>
             <Div className="col-lg-6">
-              <h2>Mechanical</h2>
-              <p className='mb-4'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui omnis, odio culpa cumque quae, obcaecati ducimus deleniti cupiditate sapiente ullam sit ab magnam nobis. Illum esse ipsum consequuntur officiis facilis.
+              <h2>Mécanique ⚙️</h2>
+              <p className='mb-4 text-justify'>L'équipe d'ingénierie mécanique est responsable de la conception et de la fabrication des composants physiques du rover. Leurs objectifs principaux sont : <br /> <br />
+                <ul>
+                    <li>Concevoir la structure et le châssis du rover</li>
+                    <li>Développer le système de mobilité, y compris la suspension et les roues</li>
+                    <li>Assurer la stabilité et la manœuvrabilité du rover sur des terrains accidentés</li>
+                    <li>Créer des simulations pour tester et optimiser la performance mécanique</li>
+                </ul>
               </p>
             </Div>
             <Div className="col-lg-6 d-none d-lg-block d-xl-block">
-              <img className='rounded-4 shadow' src="images/Mechanical.png" alt="Mechanical" />
+              <img className='rounded-4 shadow' src="images/Mechanical.webp" alt="Mechanical Team" />
             </Div>
             <Spacing lg="90" md="45" />
             <Div className="col-lg-6">
-              <img className='rounded-4 shadow' src="images/Electronical.png" alt="Electronical" />
+              <img className='rounded-4 shadow' src="images/Electronical.webp" alt="Electronic Team" />
             </Div>
             <Div className="col-lg-6">
-              <h2>Electronical</h2>
-              <p className='mb-4'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui omnis, odio culpa cumque quae, obcaecati ducimus deleniti cupiditate sapiente ullam sit ab magnam nobis. Illum esse ipsum consequuntur officiis facilis.
+              <h2>Electronique ⚡</h2>
+              <p className='mb-4 text-justify'>L'équipe d'ingénierie électrique se concentre sur les systèmes électriques essentiels au fonctionnement du rover. Leurs objectifs incluent : <br /> <br />
+                <ul>
+                    <li>Concevoir et mettre en œuvre le système d'alimentation du rover</li>
+                    <li>Développer les circuits de contrôle pour les moteurs et les servomoteurs</li>
+                    <li>Intégrer les capteurs et autres composants électroniques</li>
+                    <li>Assurer une gestion efficace de l'énergie et prévenir la surchauffe</li>
+                </ul>
               </p>
             </Div>
             <Spacing lg="90" md="45" />
             <Div className="col-lg-6 d-block d-lg-none d-xl-none">
-              <img className='rounded-4 shadow' src="images/Project Management.png" alt="Project Management" />
+              <img className='rounded-4 shadow' src="images/Project Management.webp" alt="Project Management" />
             </Div>
             <Div className="col-lg-6">
-              <h2>Project Management</h2>
-              <p className='mb-4'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui omnis, odio culpa cumque quae, obcaecati ducimus deleniti cupiditate sapiente ullam sit ab magnam nobis. Illum esse ipsum consequuntur officiis facilis.
+              <h2>Project Management 🎗️</h2>
+              <p className='mb-4 text-justify'>L'équipe d'ingénierie électrique se concentre sur les systèmes électriques essentiels au fonctionnement du rover. Leurs objectifs incluent : <br /> <br />
+                <ul>
+                    <li>Concevoir et mettre en œuvre le système d'alimentation du rover</li>
+                    <li>Développer les circuits de contrôle pour les moteurs et les servomoteurs</li>
+                    <li>Intégrer les capteurs et autres composants électroniques</li>
+                    <li>Assurer une gestion efficace de l'énergie et prévenir la surchauffe</li>
+                </ul>
               </p>
             </Div>
             <Div className="col-lg-6 d-none d-lg-block d-xl-block">
-              <img className='rounded-4 shadow' src="images/Project Management.png" alt="Project Management" />
+              <img className='rounded-4 shadow' src="images/Project Management.webp" alt="Project Management" />
             </Div>
           </Div>
         </Div>
@@ -96,7 +116,7 @@ export default function TeamPage() {
         <Div className="container" id="sponsor">
         <Cta
           title="Vous pouvez soutenir<br /> notre projet en faisant un simple geste !"
-          btnText="Faire un don"
+          btnText="Soutenir le projet"
           btnLink="/donation"
           bgSrc="/images/cta_bg.png"
         />

@@ -6,6 +6,7 @@ import Spacing from '../Spacing';
 import MovingText from '../MovingText';
 import VideoModal from '../VideoModal';
 import { pageTitle } from '../../helper';
+import { ProgressBar } from 'react-bootstrap';
 //import { HashLink as Link } from 'react-router-hash-link';
 
 const Hero = React.lazy(() => import('../Hero'));
@@ -37,6 +38,7 @@ const funfaceData = [
     factNumber: '+21',
   },*/
 ];
+
 const portfolioData = [
   {
     title: 'Conception 3D du rover',
@@ -106,9 +108,10 @@ export default function Home() {
         bgImageUrl="/images/hero.webp"
       />
       {/* End Hero Section */}
-
+      
       {/* Start FunFact Section */}
       <div className="container" id="about">
+      
         <FunFact
           variant="cs-type1"
           title="A Propos du projet"
@@ -117,8 +120,6 @@ export default function Home() {
         />
       </div>
       {/* End FunFact Section */}
-
-      
 
       {/* Start Portfolio Section
       <Spacing lg="150" md="50" />
