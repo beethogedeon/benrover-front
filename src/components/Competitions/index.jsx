@@ -1,37 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Card, Accordion } from 'react-bootstrap';
-import { NavLink } from "react-router-dom";
 import Spacing from "../Spacing";
 import Button from "../Button";
-//import { Calendar, Clock } from 'lucide-react';
-
-
-/*const TimelineEvent = ({ date, event }) => (
-  <div className="timeline-event d-flex">
-    <div className="timeline-icon bg-primary text-white rounded-circle p-2 mr-3">
-      <Calendar size={24} />
-    </div>
-    <div className="timeline-content">
-      <h5 className="mb-0">{event}</h5>
-      <p className="text-muted mb-0">
-        <Clock size={16} className="mr-1" />
-        {date}
-      </p>
-    </div>
-  </div>
-);*/
 
 const Competitions = () => {
-
-  const timelineEvents = [
-    { date: "15 mars 2024", event: "Inscription des équipes" },
-    { date: "12 mai 2024", event: "Rapport de stratégie de projet" },
-    { date: "11 août 2024", event: "Rapport de conception final" },
-    { date: "11 août 2024", event: "Vidéo" },
-    { date: "14 septembre 2024", event: "Finale de l'étape de lancement" },
-    { date: "15 septembre 2024", event: "Qualification pour l'étape Mars" },
-    { date: "26 octobre 2024", event: "Étape Mars" },
-  ];
   
     return (
         <Container className="my-5">

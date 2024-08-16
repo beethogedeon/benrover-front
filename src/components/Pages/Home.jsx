@@ -6,7 +6,6 @@ import Spacing from '../Spacing';
 import MovingText from '../MovingText';
 import VideoModal from '../VideoModal';
 import { pageTitle } from '../../helper';
-import { ProgressBar } from 'react-bootstrap';
 //import { HashLink as Link } from 'react-router-hash-link';
 
 const Hero = React.lazy(() => import('../Hero'));

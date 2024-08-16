@@ -10,6 +10,7 @@ const ErrorPage = lazy(() => import('./components/Pages/ErrorPage'));
 const TeamPage = lazy(() => import('./components/Pages/TeamPage'));
 const GalleryPage = lazy(() => import('./components/Pages/GalleryPage'));
 const CompetitionsPage = lazy(() => import('./components/Pages/CompetitionsPage'));
+const PartnersPage = lazy(() => import('./components/Pages/PartnersPage'));
 const FaqPage = lazy(() => import('./components/Pages/FaqPage'));
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="team" element={<TeamPage />} />
           <Route path="gallery" element={<GalleryPage />} />
           <Route path="competitions" element={<CompetitionsPage />} />
+          <Route path="partners" element={<PartnersPage />} />
           <Route path="faq" element={<FaqPage />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />

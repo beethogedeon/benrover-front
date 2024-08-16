@@ -12,7 +12,7 @@ const navItems = [
   { to: '/team', label: 'Notre équipe' },
   { to: '/competitions', label: 'Compétitions' },
   { to: '/#', label: 'Rovers' },
-  { to: '/#', label: 'Partenaires' },
+  { to: '/partners', label: 'Partenaires' },
   { to: '/gallery', label: 'Galerie' },
 ];
 
@@ -41,7 +41,7 @@ export default function Header({ variant }) {
           <Div className="container">
             <Div className="cs-main_header_in">
               <Div className="cs-main_header_left">
-                <NavLink className="cs-site_branding" to="/">
+                <Link className="cs-site_branding" to="/">
 
                 <Image 
                 src="/images/logo.png"
@@ -50,7 +50,7 @@ export default function Header({ variant }) {
                 fluid
                 />
                   {/*<img src="/images/logo.png" alt="BenRover - Tekbot Robotics" style={{height: '100%', objectFit: 'cover'}}/>*/}
-                </NavLink>
+                </Link>
               </Div>
               <Div className="cs-main_header_center">
                 <Div className="cs-nav cs-primary_font cs-medium">
