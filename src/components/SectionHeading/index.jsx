@@ -5,9 +5,28 @@ import Spacing from '../Spacing'
 import Div from '../Div';
 
 export default function SectionHeading({title, subtitle, btnLink, btnText, variant, children}) {
+  console.log(String(variant).includes("text-center"));
   return (
     <Div className={variant ? `cs-section_heading ${variant}` : `cs-section_heading cs-style1`}>
-      <h3 className="cs-section_subtitle">{parse(subtitle)}</h3>
+      {String(variant).includes("text-center") ? <div className='d-inline'
+      style={{
+        width: '20px',
+        height: '5px',
+        backgroundColor: '#c66948',
+        marginLeft: '7px',
+        verticalAlign: 'middle'
+      }}
+    /> : ''}
+    <h3 className="cs-section_subtitle d-inline" style={{verticalAlign: 'middle'}}>{parse(subtitle)}</h3>
+    <div className='d-inline-block'
+      style={{
+        width: '20px',
+        height: '5px',
+        backgroundColor: '#c66948',
+        marginLeft: '7px',
+        verticalAlign: 'middle'
+      }}
+    />
       <h2 className="cs-section_title">{parse(title)}</h2>
       {children}
       {btnText && (

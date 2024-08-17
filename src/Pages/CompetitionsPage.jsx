@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../helper';
-import Cta from '../Cta';
-import PageHeading from '../PageHeading';
-import Div from '../Div';
-import SectionHeading from '../SectionHeading';
-import Spacing from '../Spacing';
-import Competitions from '../Competitions';
+import { pageTitle } from '../helper';
+import Cta from '../components/Cta';
+import PageHeading from '../components/PageHeading';
+import Div from '../components/Div';
+import SectionHeading from '../components/SectionHeading';
+import Spacing from '../components/Spacing';
+import Competitions from '../components/Competitions';
 
 export default function CompetitionsPage() {
     pageTitle('Compétitions');
@@ -23,11 +23,6 @@ export default function CompetitionsPage() {
           subText="Organisé par Cars4Mars"
         />
         <Div className="container">
-          {/*<SectionHeading
-            title="Un événement incontournable pour les passionnés de la robotique."
-            subtitle="African Rover Challenge"
-          />
-          <Spacing lg="90" md="45" />*/}
           
           <Competitions />
 

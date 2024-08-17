@@ -4,7 +4,7 @@ import { ProgressBar } from 'react-bootstrap';
 const Loading = () => {
   return (
     <div style={styles.container}>
-      <ProgressBar animated now={75} style={styles.progressBar} />
+      <ProgressBar striped animated now={100} min={75} max={100} style={styles.progressBar} />
     </div>
   );
 };

@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../helper';
-import Cta from '../Cta';
-import PageHeading from '../PageHeading';
-import Div from '../Div';
-import SectionHeading from '../SectionHeading';
-import Spacing from '../Spacing';
-import GalleryStyle2 from '../Gallery/GalleryStyle2';
-import Gallery from '../Gallery';
+import { pageTitle } from '../helper';
+import Cta from '../components/Cta';
+import PageHeading from '../components/PageHeading';
+import Div from '../components/Div';
+import SectionHeading from '../components/SectionHeading';
+import Spacing from '../components/Spacing';
+import GalleryStyle2 from '../components/Gallery/GalleryStyle2';
+import Gallery from '../components/Gallery';
 
 export default function GalleryPage() {
     pageTitle('La Galerie');

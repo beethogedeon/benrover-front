@@ -1,7 +1,7 @@
 import React from 'react';
-import { pageTitle } from '../../helper';
-import Div from '../Div';
-import SectionHeading from '../SectionHeading';
+import { pageTitle } from '../helper';
+import Div from '../components/Div';
+import SectionHeading from '../components/SectionHeading';
 
 export default function ErrorPage() {
   pageTitle('Error');

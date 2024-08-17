@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../helper';
-import Cta from '../Cta';
-import PageHeading from '../PageHeading';
-import Div from '../Div';
-import SectionHeading from '../SectionHeading';
-import Spacing from '../Spacing';
-import Team from '../Team';
-import MultidisciplinaryTeamComponent from '../TeamCharts';
+import { pageTitle } from '../helper';
+import Cta from '../components/Cta';
+import PageHeading from '../components/PageHeading';
+import Div from '../components/Div';
+import SectionHeading from '../components/SectionHeading';
+import Spacing from '../components/Spacing';
+import Team from '../components/Team';
+import MultidisciplinaryTeamComponent from '../components/TeamCharts';
 
 export default function TeamPage() {
   pageTitle('Notre équipe');

@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { pageTitle } from '../../helper'
-import Button from '../Button'
-import Cta from '../Cta'
-import PageHeading from '../PageHeading'
-import Div from '../Div'
-import SectionHeading from '../SectionHeading'
-import Spacing from '../Spacing'
+import { pageTitle } from '../helper'
+import Button from '../components/Button'
+import Cta from '../components/Cta'
+import PageHeading from '../components/PageHeading'
+import Div from '../components/Div'
+import SectionHeading from '../components/SectionHeading'
+import Spacing from '../components/Spacing'
 
 export default function PortfolioDetailsPage() {
   const params = useParams()

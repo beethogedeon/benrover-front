@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
-import { pageTitle } from '../../helper'
-import Card from '../Card'
-import Cta from '../Cta'
-import PageHeading from '../PageHeading'
-import PricingTableList from '../PricingTable/PricingTableList'
-import Div from '../Div'
-import SectionHeading from '../SectionHeading'
-import TestimonialSlider from '../Slider/TestimonialSlider'
-import Spacing from '../Spacing'
+import { pageTitle } from '../helper'
+import Card from '../components/Card'
+import Cta from '../components/Cta'
+import PageHeading from '../components/PageHeading'
+import PricingTableList from '../components/PricingTable/PricingTableList'
+import Div from '../components/Div'
+import SectionHeading from '../components/SectionHeading'
+import TestimonialSlider from '../components/Slider/TestimonialSlider'
+import Spacing from '../components/Spacing'
 
 export default function ServicesPage() {
   pageTitle('Service');

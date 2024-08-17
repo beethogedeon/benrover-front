@@ -1,22 +1,22 @@
 import React, { useEffect } from 'react';
-import Card from '../Card';
-import Div from '../Div';
-import SectionHeading from '../SectionHeading';
-import Spacing from '../Spacing';
-import MovingText from '../MovingText';
-import VideoModal from '../VideoModal';
-import { pageTitle } from '../../helper';
+import Card from '../components/Card';
+import Div from '../components/Div';
+import SectionHeading from '../components/SectionHeading';
+import Spacing from '../components/Spacing';
+import MovingText from '../components/MovingText';
+import VideoModal from '../components/VideoModal';
+import { pageTitle } from '../helper';
 //import { HashLink as Link } from 'react-router-hash-link';
 
-const Hero = React.lazy(() => import('../Hero'));
-const FunFact = React.lazy(() => import('../FunFact'));
-//const RoverFeatSpecs = React.lazy(() => import('../RoverSpecs'));
-const Cta = React.lazy(() => import('../Cta'));
-const PortfolioSlider = React.lazy(() => import('../Slider/PortfolioSlider'));
-const TeamSlider = React.lazy(() => import('../Slider/TeamSlider'));
-const LogoList = React.lazy(() => import('../LogoList'));
-const Goals = React.lazy(() => import('../Slider/Goals'));
-const BeninRevele = React.lazy(() => import('../BeninRevele'));
+const Hero = React.lazy(() => import('../components/Hero'));
+const FunFact = React.lazy(() => import('../components/FunFact'));
+//const RoverFeatSpecs = React.lazy(() => import('../components/RoverSpecs'));
+const Cta = React.lazy(() => import('../components/Cta'));
+const PortfolioSlider = React.lazy(() => import('../components/Slider/PortfolioSlider'));
+const TeamSlider = React.lazy(() => import('../components/Slider/TeamSlider'));
+const LogoList = React.lazy(() => import('../components/LogoList'));
+const Goals = React.lazy(() => import('../components/Slider/Goals'));
+const BeninRevele = React.lazy(() => import('../components/BeninRevele'));
 
 // Hero Social Links
 const heroSocialLinks = [

@@ -1,13 +1,13 @@
 import { Icon } from '@iconify/react';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { pageTitle } from '../../helper';
-import Cta from '../Cta';
-import PageHeading from '../PageHeading';
-import Portfolio from '../Portfolio';
-import Div from '../Div';
-import SectionHeading from '../SectionHeading';
-import Spacing from '../Spacing';
+import { pageTitle } from '../helper';
+import Cta from '../components/Cta';
+import PageHeading from '../components/PageHeading';
+import Portfolio from '../components/Portfolio';
+import Div from '../components/Div';
+import SectionHeading from '../components/SectionHeading';
+import Spacing from '../components/Spacing';
 const portfolioData = [
   {
     title: 'Colorful Art Work',

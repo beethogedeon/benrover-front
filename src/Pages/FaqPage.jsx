@@ -1,12 +1,12 @@
 import { Icon } from '@iconify/react';
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../helper';
-import Accordion from '../Accordion';
-import Button from '../Button';
-import Cta from '../Cta';
-import Div from '../Div';
-import PageHeading from '../PageHeading';
-import Spacing from '../Spacing';
+import { pageTitle } from '../helper';
+import Accordion from '../components/Accordion';
+import Button from '../components/Button';
+import Cta from '../components/Cta';
+import Div from '../components/Div';
+import PageHeading from '../components/PageHeading';
+import Spacing from '../components/Spacing';
 
 export default function FaqPage() {
   pageTitle('Frequently Asked Questions');

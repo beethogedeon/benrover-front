@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../helper';
-import Cta from '../Cta';
-import PageHeading from '../PageHeading';
-import Pagination from '../Pagination';
-import PostStyle2 from '../Post/PostStyle2';
-import Div from '../Div';
-import Sidebar from '../Sidebar.jsx';
-import Spacing from '../Spacing';
+import { pageTitle } from '../helper';
+import Cta from '../components/Cta';
+import PageHeading from '../components/PageHeading';
+import Pagination from '../components/Pagination';
+import PostStyle2 from '../components/Post/PostStyle2';
+import Div from '../components/Div';
+import Sidebar from '../components/Sidebar.jsx';
+import Spacing from '../components/Spacing';
 const postData = [
   {
     thumb: '/images/post_4.jpeg',

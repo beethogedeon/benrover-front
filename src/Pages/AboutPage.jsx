@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../helper';
-import Cta from '../Cta';
-import FunFact from '../FunFact';
-import PageHeading from '../PageHeading';
-import Div from '../Div';
-import SectionHeading from '../SectionHeading';
-import TeamSlider from '../Slider/TeamSlider';
-import Spacing from '../Spacing';
+import { pageTitle } from '../helper';
+import Cta from '../components/Cta';
+import FunFact from '../components/FunFact';
+import PageHeading from '../components/PageHeading';
+import Div from '../components/Div';
+import SectionHeading from '../components/SectionHeading';
+import TeamSlider from '../components/Slider/TeamSlider';
+import Spacing from '../components/Spacing';
 const funfaceData = [
   {
     title: 'Global Happy Clients',

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import { pageTitle } from '../../helper'
-import Cta from '../Cta'
-import PageHeading from '../PageHeading'
-import Div from '../Div'
-import Spacing from '../Spacing'
-import SocialWidget from '../Widget/SocialWidget'
+import { pageTitle } from '../helper'
+import Cta from '../components/Cta'
+import PageHeading from '../components/PageHeading'
+import Div from '../components/Div'
+import Spacing from '../components/Spacing'
+import SocialWidget from '../components/Widget/SocialWidget'
 
 export default function TeamDetails() {
   pageTitle('Team Member');

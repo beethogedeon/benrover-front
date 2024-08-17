@@ -1,10 +1,10 @@
 //import { Icon } from '@iconify/react';
 import React, { useState, useEffect } from 'react';
-import { pageTitle } from '../../helper';
-import Div from '../Div';
-import SectionHeading from '../SectionHeading';
-import Spacing from '../Spacing';
-import NotifModal from '../Modal';
+import { pageTitle } from '../helper';
+import Div from '../components/Div';
+import SectionHeading from '../components/SectionHeading';
+import Spacing from '../components/Spacing';
+import NotifModal from '../components/Modal';
 
 const currencySigns = {
   XOF: 'FCFA',

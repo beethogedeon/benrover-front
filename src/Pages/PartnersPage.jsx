@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../helper';
+import { pageTitle } from '../helper';
 import { Col, Row } from 'react-bootstrap';
-import Cta from '../Cta';
-import PageHeading from '../PageHeading';
-import Div from '../Div';
-import Spacing from '../Spacing';
-import Partners from '../Partners';
+import Cta from '../components/Cta';
+import PageHeading from '../components/PageHeading';
+import Div from '../components/Div';
+import Spacing from '../components/Spacing';
+import Partners from '../components/Partners';
 
 const partners = [
   {

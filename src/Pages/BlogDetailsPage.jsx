@@ -1,12 +1,12 @@
 import { Icon } from '@iconify/react'
 import React, { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { pageTitle } from '../../helper'
-import Cta from '../Cta'
-import PageHeading from '../PageHeading'
-import Div from '../Div'
-import Sidebar from '../Sidebar.jsx'
-import Spacing from '../Spacing'
+import { pageTitle } from '../helper'
+import Cta from '../components/Cta'
+import PageHeading from '../components/PageHeading'
+import Div from '../components/Div'
+import Sidebar from '../components/Sidebar.jsx'
+import Spacing from '../components/Spacing'
 
 export default function BlogDetailsPage() {
   const params = useParams()
