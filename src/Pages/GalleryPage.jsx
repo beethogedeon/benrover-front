@@ -5,7 +5,7 @@ import PageHeading from '../components/PageHeading';
 import Div from '../components/Div';
 import SectionHeading from '../components/SectionHeading';
 import Spacing from '../components/Spacing';
-import GalleryStyle2 from '../components/Gallery/GalleryStyle2';
+//import GalleryStyle2 from '../components/Gallery/GalleryStyle2';
 import Gallery from '../components/Gallery';
 
 export default function GalleryPage() {

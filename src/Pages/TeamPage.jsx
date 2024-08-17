@@ -5,7 +5,7 @@ import PageHeading from '../components/PageHeading';
 import Div from '../components/Div';
 import SectionHeading from '../components/SectionHeading';
 import Spacing from '../components/Spacing';
-import Team from '../components/Team';
+//import Team from '../components/Team';
 import MultidisciplinaryTeamComponent from '../components/TeamCharts';
 
 export default function TeamPage() {

@@ -3,7 +3,7 @@ import { pageTitle } from '../helper';
 import Cta from '../components/Cta';
 import PageHeading from '../components/PageHeading';
 import Div from '../components/Div';
-import SectionHeading from '../components/SectionHeading';
+//import SectionHeading from '../components/SectionHeading';
 import Spacing from '../components/Spacing';
 import Competitions from '../components/Competitions';
 
