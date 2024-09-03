@@ -1,4 +1,3 @@
-//import { Icon } from '@iconify/react';
 import React, { useState, useEffect } from 'react';
 import { pageTitle } from '../helper';
 import Div from '../components/Div';
@@ -12,13 +11,31 @@ const currencySigns = {
   EUR: '€'
 };
 
+const ProgressBar = ({ current, target }) => {
+  const percentage = Math.min((current / target) * 100, 100);
+  return (
+    <div className="progress-bar-container" style={{ width: '100%', backgroundColor: '#e0e0e0', borderRadius: '10px', overflow: 'hidden' }}>
+      <div 
+        className="progress-bar" 
+        style={{ 
+          width: `${percentage}%`, 
+          height: '20px', 
+          backgroundColor: '#4CAF50', 
+          transition: 'width 0.5s ease-in-out' 
+        }}
+      />
+    </div>
+  );
+};
+
 export default function DonationPage() {
   pageTitle('Soutenir le projet');
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  //const [scriptLoaded, setScriptLoaded] = useState(false);
+  const [targetAmount, setTargetAmount] = useState(1000000); // Example: 1,000,000 FCFA
+const [currentAmount, setCurrentAmount] = useState(250000); // Example: 250,000 FCFA
 
   useEffect(() => {
     const loadScript = async () => {
@@ -95,18 +112,18 @@ export default function DonationPage() {
         iso: formData['currency'],
       },
       onComplete(resp) {
-        
         if (resp.reason === FedaPay.DIALOG_DISMISSED) {
-          setModalMessage('You cancel your donation !');
+          setModalMessage('Vous avez annulé votre don !');
           setIsModalOpen(true);
           setTimeout(() => setIsModalOpen(false), 3000);
         } else {
-          setModalMessage('Donation Successful! '+ resp.reason);
+          setModalMessage('Don reçu! Infiniment Merci !');
           setIsModalOpen(true);
           setTimeout(() => setIsModalOpen(false), 3000);
+          
+          // Update the current amount
+          setCurrentAmount(prevAmount => prevAmount + parseFloat(formData.amount));
         }
-  
-        console.log(resp.transaction);
       }
   });
 
@@ -121,6 +138,25 @@ export default function DonationPage() {
         pageLinkText="Donation"
       />*/}
       <Spacing lg="150" md="80" />
+
+      <Div className="col-lg-12">
+  <Div className="fundraising-progress" style={{ backgroundColor: '#242424', padding: '30px', borderRadius: '15px', marginBottom: '30px' }}>
+    <h3 className="cs-secondary_color">Objectif de collecte de fonds</h3>
+    <Spacing lg="20" md="10" />
+    <ProgressBar current={currentAmount} target={targetAmount} />
+    <Spacing lg="20" md="10" />
+    <Div className="progress-stats" style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <p className="cs-primary_color">
+        Collecté: <strong>{currentAmount.toLocaleString()} {currencySigns[formData.currency]}</strong>
+      </p>
+      <p className="cs-primary_color">
+        Objectif: <strong>{targetAmount.toLocaleString()} {currencySigns[formData.currency]}</strong>
+      </p>
+    </Div>
+  </Div>
+</Div>
+
+      <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row">
           <Div className="col-lg-6">
@@ -129,7 +165,6 @@ export default function DonationPage() {
               subtitle="Participer au projet BenRover-24"
             />
             <Spacing lg="55" md="30" />
-            {/*<ContactInfoWidget withIcon />*/}
             <Spacing lg="0" md="50" />
           </Div>
           <Div className="col-lg-6">
@@ -175,6 +210,7 @@ export default function DonationPage() {
           <input
             type="number"
             name="amount"
+            step={100}
             value={formData.amount}
             onChange={handleChange}
             className="cs-form_field"
@@ -229,14 +265,6 @@ export default function DonationPage() {
         </Div>
       </Div>
       <Spacing lg="150" md="80" />
-      {/*<Div className="cs-google_map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96652.27317354927!2d-74.33557928194516!3d40.79756494697628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a82f1352d0dd%3A0x81d4f72c4435aab5!2sTroy+Meadows+Wetlands!5e0!3m2!1sen!2sbd!4v1563075599994!5m2!1sen!2sbd"
-          allowFullScreen
-          title="Google Map"
-        />
-      </Div>
-      <Spacing lg="50" md="40" />*/}
     </>
   );
 }
