@@ -5,6 +5,9 @@ import SectionHeading from '../components/SectionHeading';
 import Spacing from '../components/Spacing';
 import NotifModal from '../components/Modal';
 
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { db } from '../firebase';
+
 const currencySigns = {
   XOF: 'FCFA',
   USD: '$',
@@ -29,14 +32,48 @@ const ProgressBar = ({ current, target }) => {
 };
 
 export default function DonationPage() {
+
+  const [targetAmount, setTargetAmount] = useState({
+    XOF: 0,
+    USD: 0,
+    EUR: 0
+  });
+  const [currentAmount, setCurrentAmount] = useState({
+    XOF: 0,
+    USD: 0,
+    EUR: 0
+  });
+
+  useEffect(() => {
+    const fetchCrowdfundingData = async () => {
+      const docRef = doc(db, process.env.REACT_APP_COLLECTION_NAME, process.env.REACT_APP_DOCUMENT_ID);
+      const docSnap = await getDoc(docRef);
+  
+      if (docSnap.exists()!=null) {
+        const data = docSnap.data();
+        setCurrentAmount({
+          XOF: data.xof || 0,
+          USD: data.usd || 0,
+          EUR: data.eur || 0
+        });
+        // You might want to set target amounts here as well if they're stored in Firebase
+        setTargetAmount({
+          XOF: 3000000, // Example target amount
+          USD: 5000,    // Example target amount
+          EUR: 4500     // Example target amount
+        });
+      }
+    };
+  
+    fetchCrowdfundingData();
+  }, []);
+  
   pageTitle('Soutenir le projet');
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [targetAmount, setTargetAmount] = useState(3000000); // Example: 1,000,000 FCFA
-const [currentAmount, setCurrentAmount] = useState(350000); // Example: 250,000 FCFA
-
+  
   useEffect(() => {
     const loadScript = async () => {
       try {
@@ -49,6 +86,8 @@ const [currentAmount, setCurrentAmount] = useState(350000); // Example: 250,000 
 
     loadScript();
   }, []);
+
+  
 
   const [locale, setLocale] = useState('');
 
@@ -111,22 +150,35 @@ const [currentAmount, setCurrentAmount] = useState(350000); // Example: 250,000 
       currency: {
         iso: formData['currency'],
       },
-      onComplete(resp) {
+      onComplete: async (resp) => {
         if (resp.reason === FedaPay.DIALOG_DISMISSED) {
           setModalMessage('Vous avez annulé votre don !');
           setIsModalOpen(true);
           setTimeout(() => setIsModalOpen(false), 3000);
         } else {
-          setModalMessage('Don reçu! Infiniment Merci !');
+          setModalMessage('Don reçu ! Infiniment Merci !');
           setIsModalOpen(true);
-          setTimeout(() => setIsModalOpen(false), 3000);
+          setTimeout(() => setIsModalOpen(false), 4000);
           
-          setCurrentAmount(prevAmount => prevAmount + parseFloat(formData.amount));
+          const amount = parseFloat(formData.amount);
+          const currency = formData.currency.toLowerCase();
+          
+          // Update Firebase
+          const docRef = doc(db, process.env.COLLECTION_NAME, process.env.DOCUMENT_NAME);
+          await updateDoc(docRef, {
+            [currency]: currentAmount[formData.currency] + amount
+          });
+  
+          // Update local state
+          setCurrentAmount(prevAmount => ({
+            ...prevAmount,
+            [formData.currency]: prevAmount[formData.currency] + amount
+          }));
         }
       }
-  });
-
-  widget.open();
+    });
+  
+    widget.open();
   };
 
   return (
@@ -142,14 +194,14 @@ const [currentAmount, setCurrentAmount] = useState(350000); // Example: 250,000 
       <Div className="fundraising-progress" style={{ padding: '50px', background: 'linear-gradient(267.18deg, #161616 0%, #080808 100%)', borderRadius:'15px'}}>
     <h3 className="cs-secondary_color">Objectif de collecte de fonds</h3>
     <Spacing lg="20" md="10" />
-    <ProgressBar current={currentAmount} target={targetAmount}/>
+    <ProgressBar current={currentAmount.XOF} target={targetAmount.XOF}/>
     <Spacing lg="20" md="10" />
     <Div className="progress-stats" style={{ display: 'flex', justifyContent: 'space-between' }}>
       <p className="cs-primary_color">
-        Collecté: <strong>{currentAmount.toLocaleString()} {currencySigns[formData.currency]}</strong>
+        Collecté: <strong>{currentAmount.XOF.toLocaleString()} XOF</strong>
       </p>
       <p className="cs-primary_color">
-        Objectif: <strong>{targetAmount.toLocaleString()} {currencySigns[formData.currency]}</strong>
+        Objectif: <strong>{targetAmount.XOF.toLocaleString()} XOF</strong>
       </p>
     </Div>
   </Div>
@@ -206,7 +258,6 @@ const [currentAmount, setCurrentAmount] = useState(350000); // Example: 250,000 
           <input
             type="number"
             name="amount"
-            defaultValue={1000}
             step={500}
             value={formData.amount? formData.amount : 1000}
             onChange={handleChange}

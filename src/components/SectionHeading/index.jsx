@@ -5,7 +5,6 @@ import Spacing from '../Spacing'
 import Div from '../Div';
 
 export default function SectionHeading({title, subtitle, btnLink, btnText, variant, children}) {
-  console.log(String(variant).includes("text-center"));
   return (
     <Div className={variant ? `cs-section_heading ${variant}` : `cs-section_heading cs-style1`}>
       {String(variant).includes("text-center") ? <div className='d-inline'
