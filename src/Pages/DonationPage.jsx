@@ -16,11 +16,11 @@ const ProgressBar = ({ current, target }) => {
   return (
     <div className="progress-bar-container" style={{ width: '100%', backgroundColor: '#e0e0e0', borderRadius: '10px', overflow: 'hidden' }}>
       <div 
-        className="progress-bar" 
+        className="progress-bar striped" 
         style={{ 
           width: `${percentage}%`, 
           height: '20px', 
-          backgroundColor: '#4CAF50', 
+          backgroundColor: '#c66948', 
           transition: 'width 0.5s ease-in-out' 
         }}
       />
@@ -34,8 +34,8 @@ export default function DonationPage() {
     window.scrollTo(0, 0);
   }, []);
 
-  const [targetAmount, setTargetAmount] = useState(1000000); // Example: 1,000,000 FCFA
-const [currentAmount, setCurrentAmount] = useState(250000); // Example: 250,000 FCFA
+  const [targetAmount, setTargetAmount] = useState(3000000); // Example: 1,000,000 FCFA
+const [currentAmount, setCurrentAmount] = useState(350000); // Example: 250,000 FCFA
 
   useEffect(() => {
     const loadScript = async () => {
@@ -43,7 +43,7 @@ const [currentAmount, setCurrentAmount] = useState(250000); // Example: 250,000 
         await import('https://cdn.fedapay.com/checkout.js?v=1.1.7');
         //setScriptLoaded(true);
       } catch (error) {
-        console.error('Failed to load script:', error);
+        //console.error('Failed to load script:', error);
       }
     };
 
@@ -121,7 +121,6 @@ const [currentAmount, setCurrentAmount] = useState(250000); // Example: 250,000 
           setIsModalOpen(true);
           setTimeout(() => setIsModalOpen(false), 3000);
           
-          // Update the current amount
           setCurrentAmount(prevAmount => prevAmount + parseFloat(formData.amount));
         }
       }
@@ -139,11 +138,11 @@ const [currentAmount, setCurrentAmount] = useState(250000); // Example: 250,000 
       />*/}
       <Spacing lg="150" md="80" />
 
-      <Div className="col-lg-12">
-  <Div className="fundraising-progress" style={{ backgroundColor: '#242424', padding: '30px', borderRadius: '15px', marginBottom: '30px' }}>
+      <Div className="container">
+      <Div className="fundraising-progress" style={{ padding: '50px', background: 'linear-gradient(267.18deg, #161616 0%, #080808 100%)', borderRadius:'15px'}}>
     <h3 className="cs-secondary_color">Objectif de collecte de fonds</h3>
     <Spacing lg="20" md="10" />
-    <ProgressBar current={currentAmount} target={targetAmount} />
+    <ProgressBar current={currentAmount} target={targetAmount}/>
     <Spacing lg="20" md="10" />
     <Div className="progress-stats" style={{ display: 'flex', justifyContent: 'space-between' }}>
       <p className="cs-primary_color">
@@ -154,10 +153,7 @@ const [currentAmount, setCurrentAmount] = useState(250000); // Example: 250,000 
       </p>
     </Div>
   </Div>
-</Div>
-
-      <Spacing lg="150" md="80" />
-      <Div className="container">
+  <Spacing lg="60" md="40" />
         <Div className="row">
           <Div className="col-lg-6">
             <SectionHeading
@@ -210,11 +206,12 @@ const [currentAmount, setCurrentAmount] = useState(250000); // Example: 250,000 
           <input
             type="number"
             name="amount"
-            step={100}
-            value={formData.amount}
+            defaultValue={1000}
+            step={500}
+            value={formData.amount? formData.amount : 1000}
             onChange={handleChange}
             className="cs-form_field"
-            min={100}
+            min={500}
             required
           />
           <Div className="spacing" style={{ margin: '20px 0' }}></Div>
