@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { pageTitle } from '../helper';
 import Div from '../components/Div';
+
 import SectionHeading from '../components/SectionHeading';
 
 export default function ErrorPage() {
-  pageTitle('Error');
+  pageTitle('Page Introuvable');
   return (
     <Div
       className="cs-page_heading cs-style1 cs-center text-center cs-bg cs-error_page"
@@ -12,9 +13,9 @@ export default function ErrorPage() {
     >
       <Div className="container">
         <SectionHeading
-          title="This page could <br/>not be found."
-          subtitle="404 Errro"
-          btnText="Back To Home"
+          title="Page Introuvable"
+          subtitle="Erreur 404"
+          btnText="Retour à l'accueil"
           btnLink="/"
           variant="cs-style1 text-center"
         />

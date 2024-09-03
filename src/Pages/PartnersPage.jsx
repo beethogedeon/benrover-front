@@ -9,9 +9,9 @@ import Partners from '../components/Partners';
 
 const partners = [
   {
-    name: "Sèmè City",
-    logo: "images/semecity.png",
-    description: "Sèmè City est une cité de l'innovation et du savoir au Bénin, offrant des ressources et un espace de travail pour les projets innovants comme le nôtre."
+    name: "SCOP",
+    logo: "images/scop.png",
+    description: "Sèmè City Open Park est une cité de l'innovation et du savoir au Bénin, offrant des ressources et un espace de travail pour les projets innovants comme le nôtre."
   },
   {
     name: "Sirius Space Association",

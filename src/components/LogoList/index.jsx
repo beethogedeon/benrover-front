@@ -3,15 +3,11 @@ import Div from '../Div';
 import './logolist.scss';
 const partnerLogos = [
   {
-    src: '/images/semecity.png',
+    src: '/images/tekbot.png',
     alt: 'Partner',
   },
   {
     src: '/images/scop.png',
-    alt: 'Partner',
-  },
-  {
-    src: '/images/tekbot.png',
     alt: 'Partner',
   },
   {

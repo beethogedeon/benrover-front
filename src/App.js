@@ -12,6 +12,8 @@ const GalleryPage = lazy(() => import('./Pages/GalleryPage'));
 const CompetitionsPage = lazy(() => import('./Pages/CompetitionsPage'));
 const PartnersPage = lazy(() => import('./Pages/PartnersPage'));
 const FaqPage = lazy(() => import('./Pages/FaqPage'));
+const RoverPage = lazy(() => import('./Pages/RoverPage'));
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="donation" element={<DonationPage />} />
+          <Route path="rover" element={<RoverPage />} />
           <Route path="team" element={<TeamPage />} />
           <Route path="gallery" element={<GalleryPage />} />
           <Route path="competitions" element={<CompetitionsPage />} />

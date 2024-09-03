@@ -9,7 +9,7 @@ const navItems = [
   { to: '/', label: 'Accueil' },
   { to: '/team', label: 'Notre équipe' },
   { to: '/competitions', label: 'Compétitions' },
-  { to: '/#', label: 'Rovers' },
+  { to: '/rover', label: 'Rovers' },
   { to: '/partners', label: 'Partenaires' },
   { to: '/gallery', label: 'Galerie' },
 ];
