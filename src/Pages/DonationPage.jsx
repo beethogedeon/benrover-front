@@ -156,24 +156,26 @@ export default function DonationPage() {
           setIsModalOpen(true);
           setTimeout(() => setIsModalOpen(false), 3000);
         } else {
-          setModalMessage('Don reçu ! Infiniment Merci !');
-          setIsModalOpen(true);
-          setTimeout(() => setIsModalOpen(false), 4000);
-          
+          // Update Firebase
           const amount = parseFloat(formData.amount);
           const currency = formData.currency.toLowerCase();
-          
-          // Update Firebase
           const docRef = doc(db, process.env.COLLECTION_NAME, process.env.DOCUMENT_NAME);
           await updateDoc(docRef, {
-            [currency]: currentAmount[formData.currency] + amount
+            XOF: currentAmount.XOF + amount
           });
   
           // Update local state
           setCurrentAmount(prevAmount => ({
             ...prevAmount,
-            [formData.currency]: prevAmount[formData.currency] + amount
+            [XOF]: prevAmount.USD + amount
           }));
+          setModalMessage('Don reçu ! Infiniment Merci !');
+          setIsModalOpen(true);
+          setTimeout(() => setIsModalOpen(false), 4000);
+          
+          
+          
+          
         }
       }
     });
