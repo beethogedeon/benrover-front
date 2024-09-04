@@ -209,7 +209,7 @@ export default function DonationPage() {
         <Div className="row">
           <Div className="col-lg-6">
             <SectionHeading
-              title="Votre aide est nécessaire pour l'achat du matériel..."
+              title="Votre contribution est nécessaire pour faire briller le Bénin sur la scène internationale..."
               subtitle="Participer au projet BenRover-24"
             />
             <Spacing lg="55" md="30" />
