@@ -262,7 +262,7 @@ export default function DonationPage() {
             value={formData.amount? formData.amount : 1000}
             onChange={handleChange}
             className="cs-form_field"
-            min={500}
+            min={100}
             required
           />
           <Div className="spacing" style={{ margin: '20px 0' }}></Div>
