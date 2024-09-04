@@ -167,7 +167,7 @@ export default function DonationPage() {
           // Update local state
           setCurrentAmount(prevAmount => ({
             ...prevAmount,
-            [XOF]: prevAmount.USD + amount
+            [XOF]: prevAmount.XOF + amount
           }));
           setModalMessage('Don reçu ! Infiniment Merci !');
           setIsModalOpen(true);
