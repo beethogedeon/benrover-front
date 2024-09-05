@@ -44,9 +44,10 @@ export default function DonationPage() {
     EUR: 0
   });
 
+  const docRef = doc(db, process.env.REACT_APP_COLLECTION_NAME, process.env.REACT_APP_DOCUMENT_ID);
+
   useEffect(() => {
     const fetchCrowdfundingData = async () => {
-      const docRef = doc(db, process.env.REACT_APP_COLLECTION_NAME, process.env.REACT_APP_DOCUMENT_ID);
       const docSnap = await getDoc(docRef);
   
       if (docSnap.exists()!=null) {
@@ -159,23 +160,21 @@ export default function DonationPage() {
           // Update Firebase
           const amount = parseFloat(formData.amount);
           const currency = formData.currency.toLowerCase();
-          const docRef = doc(db, process.env.COLLECTION_NAME, process.env.DOCUMENT_NAME);
-          await updateDoc(docRef, {
-            XOF: currentAmount.XOF + amount
-          });
+          
+          const data = {
+            [currency]: currentAmount[currency.toUpperCase()] + amount
+          }
+
+          await updateDoc(docRef, data);
   
           // Update local state
           setCurrentAmount(prevAmount => ({
             ...prevAmount,
-            [XOF]: prevAmount.XOF + amount
+            [currency]: prevAmount[currency.toUpperCase()] + amount
           }));
           setModalMessage('Don reçu ! Infiniment Merci !');
           setIsModalOpen(true);
           setTimeout(() => setIsModalOpen(false), 4000);
-          
-          
-          
-          
         }
       }
     });
