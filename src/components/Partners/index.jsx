@@ -8,7 +8,7 @@ const Partners = ({ partner }) => (
         <img src={partner.logo} alt={`Logo ${partner.name}`} className="img-fluid" style={{ maxHeight: '100px' }} />
       </div>
       {/*<Card.Title className="text-center">{partner.name}</Card.Title>*/}
-      <Card.Text className="flex-grow-1">{partner.description}</Card.Text>
+      <Card.Text className="flex-grow-1 text-justify">{partner.description}</Card.Text>
     </Card.Body>
   </Card>
 );

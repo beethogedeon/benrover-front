@@ -14,6 +14,10 @@ const partnerLogos = [
     src: '/images/sirius.png',
     alt: 'Partner',
   },
+  {
+    src: '/images/hapi.png',
+    alt: 'Partner',
+  },
 ];
 
 export default function LogoList() {

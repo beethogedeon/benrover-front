@@ -1,12 +1,9 @@
 import React from 'react';
 import parse from 'html-react-parser';
 import './hero.scss';
-import Button from '../Button';
 import Div from '../Div';
 import VerticalLinks from '../VerticalLinks';
 import SponsorButton from '../SponsorButton';
-import { div } from 'three/webgpu';
-import { AlignCenter } from 'lucide-react';
 
 export default function Hero({
   title,

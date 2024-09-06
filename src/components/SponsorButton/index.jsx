@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+//import { Button } from 'react-bootstrap';
 import { PiMoneyWavyFill } from "react-icons/pi";
 import { NavLink } from 'react-router-dom';
 import './sponsor.css';
