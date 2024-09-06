@@ -4,6 +4,9 @@ import './hero.scss';
 import Button from '../Button';
 import Div from '../Div';
 import VerticalLinks from '../VerticalLinks';
+import SponsorButton from '../SponsorButton';
+import { div } from 'three/webgpu';
+import { AlignCenter } from 'lucide-react';
 
 export default function Hero({
   title,
@@ -16,6 +19,7 @@ export default function Hero({
   bgImageUrl,
 }) {
   return (
+    <>
     <Div
       className="cs-hero cs-style1 cs-bg cs-fixed_bg cs-shape_wrap_1"
       style={{ backgroundImage: `url(${bgImageUrl})` }}
@@ -34,11 +38,23 @@ export default function Hero({
             </Div>
           </Div>
         </Div>
+        <Div className="container mt-20 align-items-end flex-column">
+          <Div className="row d-flex justify-content-center align-items-center">
+              <Div className="col d-block d-lg-none">
+                <SponsorButton />
+              </Div>
+          </Div>
+
+        </Div>
+        
       </Div>
       <VerticalLinks data={heroSocialLinks} title={socialLinksHeading} />
       {/*<a href={scrollDownId} className="cs-down_btn">
         .
       </a>*/}
+      
     </Div>
+    
+    </>
   );
 }

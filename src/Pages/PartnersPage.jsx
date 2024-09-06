@@ -18,6 +18,7 @@ const partners = [
     logo: "images/sirius.png",
     description: "La section sud-africaine de Sirius Space Association promeut l'innovation technologique et l'excellence en ingénierie."
   },
+  
 ];
 
 export default function PartnersPage() {

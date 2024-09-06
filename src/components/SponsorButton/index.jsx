@@ -6,7 +6,7 @@ import './sponsor.css';
 
 const SponsorButton = () => {
   return (
-    <NavLink to="/donation" className="buttonWrapper">
+    <NavLink to="/donation" className="buttonWrapper d-flex justify-content-center align-items-center">
       <button className="glowButton">
         <span className="buttonContent">
           <PiMoneyWavyFill className="icon" />
