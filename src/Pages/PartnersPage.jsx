@@ -53,16 +53,16 @@ export default function PartnersPage() {
     e.preventDefault();
 
     // Create data object to send
-    /*const formData = {
-      companyName,
-      partnershipType,
+    const formData = {
+      "company_name": companyName,
+      "partnership_type": partnershipType,
       email,
       description,
     };
 
     try {
       // Make API call using fetch (you can replace the URL with your actual API endpoint)
-      const response = await fetch("https://api.example.com/partnerships", {
+      const response = await fetch(process.env.REACT_APP_BACK+"/partnership-request", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -84,7 +84,7 @@ export default function PartnersPage() {
     } catch (error) {
       // Handle network errors
       setSubmissionStatus("error");
-    }*/
+    }
 
     handleClose(); // Close the modal after submission
   };

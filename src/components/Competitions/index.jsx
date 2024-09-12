@@ -109,10 +109,10 @@ const Competitions = () => {
                 </tr>
                 <tr>
                   <td>Vidéo</td>
-                  <td>11 août 2024</td>
+                  <td>07 septembre 2024</td>
                 </tr>
                 <tr>
-                  <td>Finale de l'étape de lancement</td>
+                  <td>Finale du Launch Stage</td>
                   <td>14 septembre 2024</td>
                 </tr>
                 <tr>
