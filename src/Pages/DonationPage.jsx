@@ -158,12 +158,14 @@ export default function DonationPage() {
           setTimeout(() => setIsModalOpen(false), 3000);
         } else {
           // Update Firebase
-          const response = await fetch(process.env.REACT_APP_BACK+"/thank-mail?email="+formData['email'], {
+          const response = await fetch(process.env.REACT_APP_BACK+"/thank-mail", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify(formData),
+            body: JSON.stringify({
+              "email": formData["email"],
+            }),
           });
           const amount = parseFloat(formData.amount);
           const currency = formData.currency.toLowerCase();
