@@ -66,6 +66,7 @@ export default function PartnersPage() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "X-API-Key": process.env.REACT_APP_BACKKEY
         },
         body: JSON.stringify(formData),
       });

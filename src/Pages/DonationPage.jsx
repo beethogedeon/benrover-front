@@ -158,10 +158,11 @@ export default function DonationPage() {
           setTimeout(() => setIsModalOpen(false), 3000);
         } else {
           // Update Firebase
-          const response = await fetch(process.env.REACT_APP_BACK+"/thank-mail", {
+          const response = await fetch(process.env.REACT_APP_BACK+"/thank-mail?email="+formData["email"], {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
+              "X-API-Key": process.env.REACT_APP_BACKKEY
             },
             body: JSON.stringify({
               "email": formData["email"],
