@@ -57,7 +57,7 @@ export default function PartnersPage() {
       "company_name": companyName,
       "partnership_type": partnershipType,
       "email" : email,
-      "description": description,
+      "message": description,
     };
 
     try {
