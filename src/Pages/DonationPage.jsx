@@ -161,12 +161,9 @@ export default function DonationPage() {
           const response = await fetch(process.env.REACT_APP_BACK+"/thank-mail?email="+formData["email"], {
             method: "POST",
             headers: {
-              "Content-Type": "application/json",
-              "X-API-Key": process.env.REACT_APP_BACKKEY
+              "X-API-Key": process.env.REACT_APP_BACKKEY,
+              "Content-Type": "application/json"
             },
-            body: JSON.stringify({
-              "email": formData["email"],
-            }),
           });
           const amount = parseFloat(formData.amount);
           const currency = formData.currency.toLowerCase();

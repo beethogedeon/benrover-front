@@ -56,8 +56,8 @@ export default function PartnersPage() {
     const formData = {
       "company_name": companyName,
       "partnership_type": partnershipType,
-      email,
-      description,
+      "email" : email,
+      "description": description,
     };
 
     try {
@@ -65,8 +65,8 @@ export default function PartnersPage() {
       const response = await fetch(process.env.REACT_APP_BACK+"/partnership-request", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          "X-API-Key": process.env.REACT_APP_BACKKEY
+          "X-API-Key": process.env.REACT_APP_BACKKEY,
+          "Content-Type": "application/json"
         },
         body: JSON.stringify(formData),
       });
