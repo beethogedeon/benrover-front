@@ -197,7 +197,7 @@ export default function Home() {
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
-          videoSrc="https://player.vimeo.com/video/997145295?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          videoSrc="https://www.youtube.com/embed/lGuZc1mOggA?si=G9DkU2LiXpG2eJOW"
           bgUrl="/images/video_bg.png"
         />
       </Div>
