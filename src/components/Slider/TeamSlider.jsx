@@ -10,7 +10,7 @@ const teamData = [
     memberName: 'Mohamed SALIFOU',
     memberDesignation: 'Program Manager',
     memberSocial: {
-      linkedin: 'https://linkedin.com/in/mohamed-salifou/65ab18194',
+      linkedin: 'https://linkedin.com/in/mohamed-salifou-65ab18194',
       github: 'https://github.com/moh-maker229',
     },
   },
