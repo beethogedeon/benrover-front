@@ -5,7 +5,7 @@ import PageHeading from '../components/PageHeading';
 import SectionHeading from '../components/SectionHeading';
 import Div from '../components/Div';
 import Spacing from '../components/Spacing';
-import { Document, Page } from 'react-pdf';
+//import { Document, Page } from 'react-pdf';
 //import { pdfjs } from 'react-pdf';
 
 const RoverFeatSpecs = React.lazy(() => import('../components/RoverSpecs'));
@@ -66,8 +66,8 @@ export default function RoverPage() {
             subtitle=""
             variant="cs-style1 text-center"
           />
-      {/*<PDFViewer pdfUrl="./BENROVER_PRESENTATION_14_09_2024.pdf" />*/}
-      <Document file="./BENROVER_PRESENTATION_14_09_2024.pdf" />
+      {/*<PDFViewer pdfUrl="./BENROVER_PRESENTATION_14_09_2024.pdf" />
+      <Document file="./BENROVER_PRESENTATION_14_09_2024.pdf" />*/}
         
 
         <Div className="container">
