@@ -5,8 +5,33 @@ import PageHeading from '../components/PageHeading';
 import SectionHeading from '../components/SectionHeading';
 import Div from '../components/Div';
 import Spacing from '../components/Spacing';
+import { Document, Page } from 'react-pdf';
+import { pdfjs } from 'react-pdf';
 
 const RoverFeatSpecs = React.lazy(() => import('../components/RoverSpecs'));
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+function PDFViewer({ pdfUrl }) {
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
+
+  return (
+    <div>
+      <Document
+        file={pdfUrl}
+        onLoadSuccess={onDocumentLoadSuccess}
+      >
+        <Page pageNumber={pageNumber} />
+      </Document>
+      <p>Page {pageNumber} of {numPages}</p>
+    </div>
+  );
+}
 
 export default function RoverPage() {
     pageTitle('Notre Rover');
@@ -33,6 +58,15 @@ export default function RoverPage() {
           
         </Div>
         <RoverFeatSpecs/>
+
+        <Spacing lg="90" md="45" />
+
+        <SectionHeading
+            title="BenRover - Presentation"
+            subtitle=""
+            variant="cs-style1 text-center"
+          />
+      <PDFViewer pdfUrl="./BENROVER_PRESENTATION_14_09_2024.pdf" />
         
 
         <Div className="container">
