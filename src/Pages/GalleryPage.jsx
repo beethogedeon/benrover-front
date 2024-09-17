@@ -19,7 +19,7 @@ export default function GalleryPage() {
       <>
         <PageHeading
           title="La galerie"
-          bgSrc="images/cta_bg_2.png"
+          bgSrc="images/head_back_gal.webp"
           pageLinkText="Galerie"
         />
         <Spacing lg="145" md="80" />

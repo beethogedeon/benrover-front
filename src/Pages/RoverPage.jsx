@@ -22,7 +22,7 @@ export default function RoverPage() {
       <>
         <PageHeading
           title="Le Rover"
-          bgSrc="images/cta_bg_3.png"
+          bgSrc="images/head_back_rov.webp"
           pageLinkText="Rover"
           subText=""
         />
