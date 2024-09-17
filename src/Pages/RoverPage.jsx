@@ -11,29 +11,6 @@ import Spacing from '../components/Spacing';
 
 const RoverFeatSpecs = React.lazy(() => import('../components/RoverSpecs'));
 
-{/*pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-
-function PDFViewer({ pdfUrl }) {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
-
-  return (
-    <div>
-      <Document
-        file={pdfUrl}
-        onLoadSuccess={onDocumentLoadSuccess}
-      >
-        <Page pageNumber={pageNumber} />
-      </Document>
-      <p>Page {pageNumber} of {numPages}</p>
-    </div>
-  );
-}*/}
-
 export default function RoverPage() {
     pageTitle('Notre Rover');
   
@@ -45,7 +22,7 @@ export default function RoverPage() {
       <>
         <PageHeading
           title="Le Rover"
-          bgSrc="images/team-hero-bg.webp"
+          bgSrc="images/cta_bg_3.png"
           pageLinkText="Rover"
           subText=""
         />
