@@ -20,7 +20,7 @@ const GalleryItem = ({ src, alt, title, description }) => (
       <div className="card-body d-flex flex-column">
         <h5 className="card-title text-light">{title}</h5>
         {description && <p className="card-text flex-grow-1 text-light">{description}</p>}
-        <button className="btn btn-outline-primary mt-auto">En savoir plus</button>
+        {/*<button className="btn btn-outline-primary mt-auto">En savoir plus</button>*/}
       </div>
     </div>
   </div>
