@@ -101,7 +101,7 @@ export default function DonationPage() {
     firstname: '',
     lastname: '',
     email: '',
-    amount: '',
+    amount: '1000',
     currency: 'XOF', // default to USD
     paymentType: 'Paiements mobiles'
   });
@@ -261,21 +261,21 @@ export default function DonationPage() {
           />
           <Div className="spacing" style={{ margin: '20px 0' }}></Div>
         </Div>
-        <Div className="col-sm-6">
+        <Div className="col-sm-12">
           <label className="cs-primary_color">Montant*</label>
           <input
             type="number"
             name="amount"
             step={500}
-            value={formData.amount? formData.amount : 1000}
+            value={formData.amount}
             onChange={handleChange}
             className="cs-form_field"
-            min={100}
+            min={500}
             required
           />
           <Div className="spacing" style={{ margin: '20px 0' }}></Div>
         </Div>
-        <Div className="col-sm-6">
+        {/*<Div className="col-sm-6">
           <label className="cs-primary_color">Devise*</label>
           <select
             name="currency"
@@ -290,7 +290,7 @@ export default function DonationPage() {
             <option value="USD">USD</option>
           </select>
           <Div className="spacing" style={{ margin: '20px 0' }}></Div>
-        </Div>
+        </Div>*/}
         {/*<Div className="col-sm-12">
           <label className="cs-primary_color">Payment Type*</label>
           <select
@@ -308,7 +308,7 @@ export default function DonationPage() {
         </Div>*/}
         <Div className="col-sm-12">
           <button className="cs-btn cs-style1">
-          <span>Faire un don {formData['amount'] !== '' ? `de ${formData['amount']} ${currencySigns[formData['currency']]}` : ''}</span>
+          <span>Faire un don {formData['amount'] !== '' ? `de ${formData['amount']} FCFA` : ''}</span>
           </button>
         </Div>
       </form>

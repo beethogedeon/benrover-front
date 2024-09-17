@@ -5,7 +5,7 @@ import PageHeading from '../components/PageHeading';
 import SectionHeading from '../components/SectionHeading';
 import Div from '../components/Div';
 import Spacing from '../components/Spacing';
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+//import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 //import { Document, Page } from 'react-pdf';
 //import { pdfjs } from 'react-pdf';
 
@@ -62,16 +62,16 @@ export default function RoverPage() {
 
         <Spacing lg="90" md="45" />
 
-        <SectionHeading
+        {/*<SectionHeading
             title="BenRover - Presentation"
             subtitle=""
             variant="cs-style1 text-center"
           />
-      {/*<PDFViewer pdfUrl="./BENROVER_PRESENTATION_14_09_2024.pdf" />
-      <Document file="./BENROVER_PRESENTATION_14_09_2024.pdf" />*/}
+      <PDFViewer pdfUrl="./BENROVER_PRESENTATION_14_09_2024.pdf" />
+      <Document file="./BENROVER_PRESENTATION_14_09_2024.pdf" />
       <Document file="./BENROVER_PRESENTATION_14_09_2024.pdf">
                 <Page pageNumber={1} />
-      </Document>
+      </Document>*/}
         
 
         <Div className="container">
