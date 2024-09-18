@@ -222,7 +222,7 @@ export default function DonationPage() {
             <Spacing lg="0" md="50" />
           </Div>
           <div className="col-lg-6">
-          <div className="d-none d-lg-block">
+          <div>
             <ul className="nav nav-pills nav-justified mb-3" role="tablist">
           <li className="nav-item" role="presentation">
             <button
