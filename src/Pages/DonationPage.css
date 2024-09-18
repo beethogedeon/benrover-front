@@ -1,0 +1,25 @@
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: var(--accent);
+  }
+  
+  .nav-pills .nav-link {
+    background-color: rgba(198, 105, 72, 0.02);
+  }
+  
+  .nav-link{
+    color: var(--accent);
+    font-size: 16px;
+    font-weight:500px;
+  }
+  
+  .nav-link:focus, .nav-link:hover {
+    background-color: rgba(198, 105, 72, 0.3);
+  }
+  
+  .nav-pills{
+    --bs-nav-pills-link-hover-bg:rgba(198, 105, 72, 0.2);
+  }
+  
+  .nav{
+    --bs-nav-link-hover-color:rgba(198, 105, 72, 0.6);
+  }

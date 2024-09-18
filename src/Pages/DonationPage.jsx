@@ -4,6 +4,7 @@ import Div from '../components/Div';
 import SectionHeading from '../components/SectionHeading';
 import Spacing from '../components/Spacing';
 import NotifModal from '../components/Modal';
+import './DonationPage.css';
 
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase';
@@ -32,6 +33,8 @@ const ProgressBar = ({ current, target }) => {
 };
 
 export default function DonationPage() {
+
+  const [activeTab, setActiveTab] = useState('africa');
 
   const [targetAmount, setTargetAmount] = useState({
     XOF: 0,
@@ -191,11 +194,6 @@ export default function DonationPage() {
 
   return (
     <>
-      {/*<PageHeading
-        title="Donation"
-        bgSrc="/images/contact_hero_bg.jpeg"
-        pageLinkText="Donation"
-      />*/}
       <Spacing lg="150" md="80" />
 
       <Div className="container">
@@ -223,7 +221,121 @@ export default function DonationPage() {
             <Spacing lg="55" md="30" />
             <Spacing lg="0" md="50" />
           </Div>
-          <Div className="col-lg-6">
+          <div className="col-lg-6">
+          <div className="d-none d-lg-block">
+            <ul className="nav nav-pills nav-justified mb-3" role="tablist">
+          <li className="nav-item" role="presentation">
+            <button
+              className={`nav-link h3 ${activeTab === 'africa' ? 'active' : ''}`}
+              onClick={() => setActiveTab('africa')}
+              role="tab"
+              aria-controls="africa"
+              aria-selected={activeTab === 'africa'}
+            >
+              Depuis l'Afrique
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className={`nav-link h3 ${activeTab === 'world' ? 'active' : ''}`}
+              onClick={() => setActiveTab('world')}
+              role="tab"
+              aria-controls="world"
+              aria-selected={activeTab === 'world'}
+            >
+              Hors de l'Afrique
+            </button>
+          </li>
+        </ul>
+
+        <div className="tab-content">
+          <div
+            className={`tab-pane fade ${activeTab === 'africa' ? 'show active' : ''}`}
+            id="africa"
+            role="tabpanel"
+          >
+            {/*<h3 className='text-center'>Fonctionnalités</h3>*/}
+            <form onSubmit={handleSubmit} className="row">
+        <Div className="col-sm-6">
+          <label className="cs-primary_color">Prénoms*</label>
+          <input
+            type="text"
+            name="firstname"
+            value={formData.firstname}
+            onChange={handleChange}
+            className="cs-form_field"
+            required
+          />
+          <Div className="spacing" style={{ margin: '20px 0' }}></Div>
+        </Div>
+        <Div className="col-sm-6">
+          <label className="cs-primary_color">Nom de famille*</label>
+          <input
+            type="text"
+            name="lastname"
+            value={formData.lastname}
+            onChange={handleChange}
+            className="cs-form_field"
+            required
+          />
+          <Div className="spacing" style={{ margin: '20px 0' }}></Div>
+        </Div>
+        <Div className="col-sm-12">
+          <label className="cs-primary_color">Adresse mail*</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className="cs-form_field"
+            required
+          />
+          <Div className="spacing" style={{ margin: '20px 0' }}></Div>
+        </Div>
+        <Div className="col-sm-12">
+          <label className="cs-primary_color">Montant*</label>
+          <input
+            type="number"
+            name="amount"
+            step={500}
+            value={formData.amount}
+            onChange={handleChange}
+            className="cs-form_field"
+            min={500}
+            required
+          />
+          <Div className="spacing" style={{ margin: '20px 0' }}></Div>
+        </Div>
+        <Div className="col-sm-12">
+          <button className="cs-btn cs-style1">
+          <span>Faire un don {formData['amount'] !== '' ? `de ${formData['amount']} FCFA` : ''}</span>
+          </button>
+        </Div>
+      </form>
+          </div>
+          <div
+            className={`tab-pane fade ${activeTab === 'world' ? 'show active' : ''}`}
+            id="world"
+            role="tabpanel"
+          >
+            <p>
+          Nous vous prions de bien vouloir suivre la procédure suivante : <br /><br />
+          <ul>
+            <li>
+              Télécharger l'application TapTap Send disponible sur AppStore et PlayStore.
+            </li>
+            <li>
+              Effectuer le transfert sur le +229 96 24 94 94 (Mohamed SALIFOU)
+            </li>
+          </ul>
+        </p>
+          </div>
+        </div>
+          </div>
+        </div>
+          {/*<Div className="col-lg-6 container">
+          <Tabs className='row' id="controlled-tab-example" activeKey={key} onSelect={(k) => setKey(k)}>
+          <Tab eventKey="africa" title="Depuis l'Afrique">
       <form onSubmit={handleSubmit} className="row">
         <Div className="col-sm-6">
           <label className="cs-primary_color">Prénoms*</label>
@@ -275,49 +387,31 @@ export default function DonationPage() {
           />
           <Div className="spacing" style={{ margin: '20px 0' }}></Div>
         </Div>
-        {/*<Div className="col-sm-6">
-          <label className="cs-primary_color">Devise*</label>
-          <select
-            name="currency"
-            value={formData.currency}
-            onChange={handleChange}
-            className="cs-form_field"
-            style={{ backgroundColor: '#181818' }}
-            required
-          >
-            <option value="XOF">FCFA</option>
-            <option value="EUR">EUR</option>
-            <option value="USD">USD</option>
-          </select>
-          <Div className="spacing" style={{ margin: '20px 0' }}></Div>
-        </Div>*/}
-        {/*<Div className="col-sm-12">
-          <label className="cs-primary_color">Payment Type*</label>
-          <select
-            name="paymentType"
-            value={formData.paymentType}
-            onChange={handleChange}
-            className="cs-form_field"
-            style={{ backgroundColor: '#181818'}}
-            required
-          >
-            <option value="Mobile payments">Mobile payments</option>
-            <option value="Debit Card">Debit Card</option>
-          </select>
-          <Div className="spacing" style={{ margin: '20px 0' }}></Div>
-        </Div>*/}
         <Div className="col-sm-12">
           <button className="cs-btn cs-style1">
           <span>Faire un don {formData['amount'] !== '' ? `de ${formData['amount']} FCFA` : ''}</span>
           </button>
         </Div>
       </form>
-      <NotifModal
+      </Tab>
+      <Tab eventKey="world" title="Hors de l'Afrique">
+        <p>
+          Nous vous prions de bien vouloir suivre la procédure suivante : <br /><br />
+          <ul>
+            <li>
+              Télécharger l'application TapTap Send disponible sur AppStore et PlayStore
+            </li>
+          </ul>
+        </p>
+      </Tab>  
+      
+    </Tabs>
+    </Div>*/}
+    <NotifModal
         isOpen={isModalOpen}
         onRequestClose={() => setIsModalOpen(false)}
         message={modalMessage}
       />
-    </Div>
         </Div>
       </Div>
       <Spacing lg="150" md="80" />
